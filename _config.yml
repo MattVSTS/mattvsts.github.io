@@ -13,8 +13,6 @@ baseurl:     '' # The subpath of your site, e.g. /blog
 url:         'https://mattvsts.github.io/' # The base hostname & protocol for your site
 twitter:     'https://twitter.com/MattVSTS'
 github:      'https://github.com/MattVSTS'
-instagram:   ''
-facebook:    ''
 
 markdown:  kramdown
 permalink: pretty
