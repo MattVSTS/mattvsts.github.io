@@ -1,0 +1,13 @@
+---
+layout: post
+title: Unblock the SonarQube upgrade process when using Azure AD plugin for authentication
+date: '2018-10-22T16:25:00.000+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2018-10-22T16:25:45.925+01:00'
+thumbnail: https://1.bp.blogspot.com/-faDr6gK1DYM/W83rNX9gwII/AAAAAAAAFEs/kJD84QT1-AcLlAy_bgASlsF3txn1_PrfwCLcBGAs/s72-c/2018-10-22_16-21-15.png
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-8260819734823948341
+blogger_orig_url: https://mattvsts.blogspot.com/2018/10/unblock-sonarqube-upgrade-process-when.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on">There is a well <a href="https://github.com/SonarQubeCommunity/sonar-auth-aad/issues/55">known issue</a> with SonarQube's Azure AD plugin, where an upgrade from v6.x to v7.x fails. Fixing this issue involves modifying the Users table manually outside of the upgrade process, and at the moment it is something you cannot avoid.<br /><br />The reason why this happens is because the external_identity column does not contain a unique value, while instead it is filled with '<i>Azure AD</i>' for each user. This is not a critical column, and you should be able to do this without issues.<br /><br />Then I thought about a handy way of fixing this instead of just writing random data in it. Whenever you sign-in with the new plug-in, '<i>Azure AD</i>' is going to be replaced with your email. So, I put together this very simple script.<br /><br />Before you run this remember that I bear no responsibilities from it - it worked on my machine, it might not on yours 😊 always test it on backups first!<br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="https://1.bp.blogspot.com/-faDr6gK1DYM/W83rNX9gwII/AAAAAAAAFEs/kJD84QT1-AcLlAy_bgASlsF3txn1_PrfwCLcBGAs/s1600/2018-10-22_16-21-15.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="184" data-original-width="375" src="https://1.bp.blogspot.com/-faDr6gK1DYM/W83rNX9gwII/AAAAAAAAFEs/kJD84QT1-AcLlAy_bgASlsF3txn1_PrfwCLcBGAs/s1600/2018-10-22_16-21-15.png" /></a></div><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />This takes care of the uniqueness of the value and enables the upgrade to go ahead. Needless to say that this script can be easily added to my proof-of-concept of <a href="https://mattvsts.blogspot.com/2017/12/an-unusual-scenario-for-release.html">automated pipeline</a>!</div>

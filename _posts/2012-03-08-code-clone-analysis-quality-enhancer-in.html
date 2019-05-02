@@ -1,0 +1,13 @@
+---
+layout: post
+title: 'Code Clone Analysis: a quality enhancer in day by day use'
+date: '2012-03-08T10:49:00.001Z'
+author: Matteo Emili
+tags: 
+modified_time: '2012-03-08T10:49:09.708Z'
+thumbnail: http://lh3.ggpht.com/-szGcOhYpn84/T1iOk9fbfdI/AAAAAAAAAEw/QcqB8PAsT8Q/s72-c/image_thumb1.png?imgmax=800
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-5261917015348499031
+blogger_orig_url: https://mattvsts.blogspot.com/2012/03/code-clone-analysis-quality-enhancer-in.html
+---
+
+<p>A huge problem we have in team development is code recycling.</p> <p>Sometimes it may be good, recycling some factory-like code we previously created to be reusable, but most of the times it’s a mere copy-paste which leads to problems.</p> <p>In Visual Studio 11 we have a great aid in avoiding this: Code Clone Analysis.</p> <p>By selecting a code snippet, we can right-click it and selecting “Find Matching Clones in Solution”</p> <p><a href="http://lh3.ggpht.com/-X9oqC7Kz27I/T1iOkNdCrVI/AAAAAAAAAEo/7Hi0wu9pbJw/s1600-h/image3.png"><img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://lh3.ggpht.com/-szGcOhYpn84/T1iOk9fbfdI/AAAAAAAAAEw/QcqB8PAsT8Q/image_thumb1.png?imgmax=800" width="392" height="125"></a></p> <p>It searches in the current document for clones, with various level of matching</p> <p><a href="http://lh5.ggpht.com/-IGirpN4CHJo/T1iOl24Vc1I/AAAAAAAAAE4/rszncKVJUko/s1600-h/image7.png"><img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://lh3.ggpht.com/-uHN3C4ck8iA/T1iOnHquQKI/AAAAAAAAAFA/4WIwtuB9Qts/image_thumb3.png?imgmax=800" width="326" height="156"></a></p> <p>This could be extended to the whole solution, by selecting “Analyse Solution for Code Clones” under the Analyze menu.</p> <p><a href="http://lh5.ggpht.com/-AfO1Arh3dx8/T1iOn925xaI/AAAAAAAAAFE/7HECPwT288I/s1600-h/image10.png"><img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://lh6.ggpht.com/-keWnxPlIeFM/T1iOoxKmXKI/AAAAAAAAAFQ/_85putV08_w/image_thumb4.png?imgmax=800" width="197" height="244"></a></p>  

@@ -1,0 +1,13 @@
+---
+layout: post
+title: Error AADSTS90093 with SonarQube and AAD, why?
+date: '2017-01-04T15:40:00.001Z'
+author: Matteo Emili
+tags: 
+modified_time: '2017-01-04T15:40:59.623Z'
+thumbnail: https://lh3.googleusercontent.com/-GY7Mn-lZ6E0/WG0XhvuZnmI/AAAAAAAAERo/9yz9mBKDW04/s72-c/image_thumb%25255B1%25255D.png?imgmax=800
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-5272434567204466909
+blogger_orig_url: https://mattvsts.blogspot.com/2017/01/error-aadsts90093-with-sonarqube-and.html
+---
+
+<p><br><a href="https://lh3.googleusercontent.com/-QwlrTZcUrqo/WG0XgVIHTMI/AAAAAAAAERg/ijr98JoT-xU/s1600-h/image%25255B3%25255D.png"><img title="image" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="image" src="https://lh3.googleusercontent.com/-GY7Mn-lZ6E0/WG0XhvuZnmI/AAAAAAAAERo/9yz9mBKDW04/image_thumb%25255B1%25255D.png?imgmax=800" width="504" height="421"></a></p> <p>It happens. And the reason here is extremely easy and straightforward: if you have any permission on your AAD application for SonarQube which <strong>you don’t need</strong> you will be denied access <img class="wlEmoticon wlEmoticon-smile" style="border-top-style: none; border-left-style: none; border-bottom-style: none; border-right-style: none" alt="Smile" src="https://lh3.googleusercontent.com/-EQZaP9WBJQs/WG0XimnoepI/AAAAAAAAERw/uOZHpJwI9Qs/wlEmoticon-smile%25255B2%25255D.png?imgmax=800"></p> <p>The documentation was <a href="https://github.com/SonarQubeCommunity/sonar-auth-aad/commits/master/README.md">updated</a> in June but this error came out recently on an old instance set up before then.</p>

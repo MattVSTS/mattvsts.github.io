@@ -1,0 +1,12 @@
+---
+layout: post
+title: 'A design consideration: SQL Server AlwaysOn Availability Mode for TFS'
+date: '2015-05-17T22:05:00.001+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2015-05-17T22:05:35.735+01:00'
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-8461580555854903115
+blogger_orig_url: https://mattvsts.blogspot.com/2015/05/a-design-consideration-sql-server.html
+---
+
+<p>There are a few bits of any Team Foundation Server deployment which are either taken for granted, or completely ignored. One of them is:</p> <blockquote> <p><strong><em>Why shall I choose a Synchronous-Commit Availability Mode for the TFS Data Tier using SQL Server AlwaysOn?</em></strong></p></blockquote> <p>If you are running an AlwaysOn Availability Group, you should know that you have a <a href="https://msdn.microsoft.com/en-us/ff877931.aspx">choice</a> on how to write your Transaction Log – hence your database integrity. My suggestion is to run Team Foundation Server’s data tier in a <strong>Synchronous-Commit Availability Mode.</strong></p> <p>The reason is very simple: TFS relies heavily on the Transaction Log, and it is the only way to guarantee a point-in-time recovery. Moreover, if you run AlwaysOn you cannot have any database in the Availability Group set without the <strong>Full </strong>recovery mode.</p> <p>So you <a href="http://mattvsts.blogspot.co.uk/2014/08/tfs-transaction-marking-on-sql-server.html">must use</a> the Transaction Log, and it is critical for the Team Foundation Server recovery – using the Synchronous-Commit mode ensures that each Secondary Replica in your Availability Group has <strong>an updated copy</strong> of the Transaction Log, synchronised at the same time as the Primary Replica, for immediate failover and service continuity.</p> <p>You will face a really minor increase in the RTO (a few seconds, generally) and a performance loss, but we are talking about something you won’t be able to realise in general usage, and you are ensuring your service has an excellent reliability.</p>  

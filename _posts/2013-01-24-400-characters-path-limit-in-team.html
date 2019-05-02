@@ -1,0 +1,12 @@
+---
+layout: post
+title: 400 characters path limit in Team Foundation Server 2012
+date: '2013-01-24T08:25:00.001Z'
+author: Matteo Emili
+tags: 
+modified_time: '2013-01-24T08:25:14.402Z'
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-4563171026974027170
+blogger_orig_url: https://mattvsts.blogspot.com/2013/01/400-characters-path-limit-in-team.html
+---
+
+<p>This is a brief post to answer a simple question.</p> <p>“I have been told Team Foundation Server 2012 supports paths longer than 260 chars. How is it possible? How can I manage it?”</p> <p>Simple question, simple answer: if you have to work on a specific branch, which goes over the limit (eg.: $/Project/SubProject/Branch/…./WhatINeed, over 260 chars) you just have to map it to a shorter local path.</p> <p>Rationale behind it? This is a needed change in cases we have a huge branching strategy in place, sometimes inherited from migrations of older projects. It impacts just the server, not the clients, so you are still subject to the Windows limit.</p>  

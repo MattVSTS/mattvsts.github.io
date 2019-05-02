@@ -1,0 +1,13 @@
+---
+layout: post
+title: A quick look at the Team Foundation Server’s permissions inheritance
+date: '2014-06-04T15:21:00.001+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2014-06-04T15:21:24.149+01:00'
+thumbnail: http://lh5.ggpht.com/-TjpqJD5XywE/U48rXMKFeaI/AAAAAAAABZQ/j505A1PWj9o/s72-c/image_thumb.png?imgmax=800
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-2668906611887439301
+blogger_orig_url: https://mattvsts.blogspot.com/2014/06/a-quick-look-at-team-foundation-servers.html
+---
+
+<p>Straight with the sample – why does it happen…</p> <p><a href="http://lh4.ggpht.com/-vWgjMx7xizk/U48rWrpuSXI/AAAAAAAABZI/NvEqT_v6pE8/s1600-h/image%25255B2%25255D.png"><img title="image" style="border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px; display: inline" border="0" alt="image" src="http://lh5.ggpht.com/-TjpqJD5XywE/U48rXMKFeaI/AAAAAAAABZQ/j505A1PWj9o/image_thumb.png?imgmax=800" width="244" height="221"></a> </p> <p>…even if my user is a <strong>Project Administrator</strong>?</p> <p>Because the single user’s permission are less important than the Team’s one – and as in this team there is a explicit deny on that permission (Edit project-level information) even if he is an Administrator he is going to get a deny.</p> <p>Indeed…</p> <p><a href="http://lh6.ggpht.com/-InX7dDMiPK8/U48rX_ybjOI/AAAAAAAABZY/XztxgwGpABw/s1600-h/image%25255B5%25255D.png"><img title="image" style="border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px; display: inline" border="0" alt="image" src="http://lh3.ggpht.com/-pC9EnLtUy9c/U48rYXnav5I/AAAAAAAABZg/x1iMGzOzlQc/image_thumb%25255B1%25255D.png?imgmax=800" width="244" height="210"></a> </p> <p>That’s because you can be the CEO, but you won’t be allowed to change the delete the Team Project on your own if you’d be fired, for example :)</p>  

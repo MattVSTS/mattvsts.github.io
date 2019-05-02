@@ -1,0 +1,13 @@
+---
+layout: post
+title: SonarQube analysis of Java code with VSTS
+date: '2016-08-12T15:41:00.001+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2016-08-12T15:41:13.361+01:00'
+thumbnail: https://lh3.googleusercontent.com/-AGl0yMBHfmI/V63f8lmg4NI/AAAAAAAAD0M/C38ZqAafZ1E/s72-c/image_thumb%25255B3%25255D.png?imgmax=800
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-6314125554885235540
+blogger_orig_url: https://mattvsts.blogspot.com/2016/08/sonarqube-analysis-of-java-code-with.html
+---
+
+<p>As <a href="http://mattvsts.blogspot.co.uk/2016/06/a-simple-vsts-based-pipeline-for-java.html">we know</a>, we can use VSTS to build Java code as well as .NET code thanks to the Maven instance provided by the service. It is one of the reasons why we can forget about the build engine with VSTS – it just works.</p> <p>If I use Maven on VSTS I don’t even need to add a SonarQube task in the Build Definition. All I need to do is to tick the checkbox and point Maven to my SonarQube instance:</p> <p><a href="https://lh3.googleusercontent.com/-sunL4bRF5Wc/V63f7oumJgI/AAAAAAAAD0E/VWvRPpye6fc/s1600-h/image%25255B7%25255D.png"><img title="image" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="image" src="https://lh3.googleusercontent.com/-AGl0yMBHfmI/V63f8lmg4NI/AAAAAAAAD0M/C38ZqAafZ1E/image_thumb%25255B3%25255D.png?imgmax=800" width="504" height="225"></a></p> <p>This is literally all I have to do. Maven is already configured so I will get my SonarQube analysis in two clicks:</p> <p><a href="https://lh3.googleusercontent.com/-Hjhre24kZW0/V63f9nDxlkI/AAAAAAAAD0U/k5YZcDeB2I4/s1600-h/image%25255B6%25255D.png"><img title="image" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="image" src="https://lh3.googleusercontent.com/-9jT2jf-BCdc/V63gCDNppmI/AAAAAAAAD0c/OIxbcDCObRs/image_thumb%25255B2%25255D.png?imgmax=800" width="504" height="189"></a></p>

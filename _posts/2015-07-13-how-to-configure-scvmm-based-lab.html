@@ -1,0 +1,13 @@
+---
+layout: post
+title: How to configure SCVMM-based Lab Management for selected Team Projects
+date: '2015-07-13T15:59:00.001+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2015-07-13T15:59:35.162+01:00'
+thumbnail: http://lh6.ggpht.com/-YzXHRs8QIMM/VGpsFwdg4NI/AAAAAAAABoc/snHdeT3g67s/s72-c/image_thumb%25255B18%25255D.png?imgmax=800
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-8611776662815806958
+blogger_orig_url: https://mattvsts.blogspot.com/2015/07/how-to-configure-scvmm-based-lab.html
+---
+
+<p>Not all the Team Projects we have in the company might need to get Lab Management, and we pretty much know about the need of <em>locking down</em> certain resources.</p> <p>So if you want to enable SCVMM-based Lab Management you need to configure the Library Share and the Host Group on a case-by-case basis instead of dropping them all in, by un-checking the <strong>Auto-Provisioning </strong>checkbox here:</p> <p><a href="http://lh6.ggpht.com/-CQeMod4FG5o/VGpsFdnGdlI/AAAAAAAABoU/H2SGWX8KoI4/s1600-h/image%25255B32%25255D.png"><img title="image" border="0" alt="image" src="http://lh6.ggpht.com/-YzXHRs8QIMM/VGpsFwdg4NI/AAAAAAAABoc/snHdeT3g67s/image_thumb%25255B18%25255D.png?imgmax=800" width="484" height="361"></a><a href="http://lh4.ggpht.com/-RB2l9RCEE-Q/VGpsGKxp56I/AAAAAAAABok/qmeMYCoogpE/s1600-h/image%25255B31%25255D.png"><img title="image" border="0" alt="image" src="http://lh3.ggpht.com/-LYR982mFnZI/VGpsGg5GqvI/AAAAAAAABos/s7Iw2WUdq9U/image_thumb%25255B17%25255D.png?imgmax=800" width="484" height="350"></a></p> <p>Then you need to run <strong>TFSLabConfig</strong> <strong><a href="https://msdn.microsoft.com/en-us/library/dn249786.aspx">TPLibraryShare</a> /add</strong> and <strong><a href="https://msdn.microsoft.com/en-us/library/dn249785.aspx">TPHostGroup</a> /add</strong> to enable the single Team Project.</p>  

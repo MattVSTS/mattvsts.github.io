@@ -1,0 +1,12 @@
+---
+layout: post
+title: Tailor-made Visual Studio 2012 installations (aka unattended, the new way)
+date: '2012-08-17T10:15:00.001+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2012-08-17T10:15:21.835+01:00'
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-3556926334384446426
+blogger_orig_url: https://mattvsts.blogspot.com/2012/08/tailor-made-visual-studio-2012.html
+---
+
+<p>Up to Visual Studio 2010 the unattended installation was made up of many steps, making a journey into a .ini file…</p> <p>With Visual Studio 2012, the new experience is pretty faster, cleaner and easier.</p> <p>The first thing to do is to create a <strong>Network Image</strong>, to be used into the company to deploy Visual Studio 2012. You have to create a <em>X:/IDEinstall</em> folder.</p> <p>Then the only needed step is to customize the <strong>AdminDeployment.xml</strong> file! I won’t go deep dive on the schema as the MSDN <a href="http://msdn.microsoft.com/en-us/library/ee225237.aspx">documentation</a> is self-explanative, but it can be summarized as it: you can choose which component to install in a Yes|No binary choice.</p> <p>Once the AdminDeployment.xml file is customized as you want, you just have to grant the share all the required permissions and the users are automatically going to install Visual Studio with the defined settings. </p> <p>Otherwise a silent installation is possible using the following command line statement:</p> <p><strong>\\ServerName\IDEinstall\vs_Product.exe /adminfile AdminDeployment.xml /quiet /norestart</strong></p> <p>This statement is also the way of managing Visual Studio installations, both quiet and interactive. Again, everything relies on the <strong>AdminDeployment.xml</strong> file.</p>  

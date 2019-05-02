@@ -1,0 +1,13 @@
+---
+layout: post
+title: Some tips on Search Server for TFS 2017
+date: '2017-06-29T13:04:00.001+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2017-06-29T13:04:52.751+01:00'
+thumbnail: https://lh3.googleusercontent.com/-AnbOJzQZ3YY/WVTs4x0aS6I/AAAAAAAAEfE/6BB1G_q7APAvVs_S20IdAZ090Ei6WusjgCHMYCw/s72-c/wlEmoticon-smile%255B2%255D?imgmax=800
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-5982422996225818002
+blogger_orig_url: https://mattvsts.blogspot.com/2017/06/some-tips-on-search-server-for-tfs-2017.html
+---
+
+<p>Code Search is a brilliant feature based off Elastic Search. I wanted to summarise a few tips from my relatively limited experience with Search Server for TFS 2017, which adds Code Search to your instance.</p><p>The first thing to remember is that the size of the index can be quite large (up to 30% the size of a collection in the worst case) so plan for it in advance.</p><p>CPU and RAM should not be underestimated as well. Elastic Search can be a quite intensive process. </p><p>If you are not an expert on it (like me <img class="wlEmoticon wlEmoticon-smile" style="" alt="Smile" src="https://lh3.googleusercontent.com/-AnbOJzQZ3YY/WVTs4x0aS6I/AAAAAAAAEfE/6BB1G_q7APAvVs_S20IdAZ090Ei6WusjgCHMYCw/wlEmoticon-smile%255B2%255D?imgmax=800">) you want to use <a href="https://github.com/Microsoft/Code-Search">these script</a> the TFS Product Team provided. They are straightforward and extremely useful. Also take a look at the <a href="https://www.visualstudio.com/en-gb/docs/search/code/administration">documentation</a>, it is very useful as well.</p><p>The indexing process can be quite tough on the TFS scheduler, so bear in mind this when you install it – otherwise you will see some jobs delayed. </p><p>This should not have an impact on the users (all the core jobs have higher priority anyway), but it is worth remembering that the indexing job will have a similar priority to the reporting jobs, so there is a risk of slowing reporting down.</p>

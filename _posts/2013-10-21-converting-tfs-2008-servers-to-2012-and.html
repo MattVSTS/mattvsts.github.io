@@ -1,0 +1,12 @@
+---
+layout: post
+title: Converting TFS 2008 servers to 2012 and 2013
+date: '2013-10-21T21:29:00.000+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2013-10-21T21:29:44.031+01:00'
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-6468641511221587014
+blogger_orig_url: https://mattvsts.blogspot.com/2013/10/converting-tfs-2008-servers-to-2012-and.html
+---
+
+As you know, Team Foundation Server 2008 had several limitations which prevents a direct migration to 2012 or 2013. It is a <strong>legacy</strong> release, good at its times but definitely not adequate anymore.<br />Migrating it through an in-place upgrade to 2010 and then a move to 2012/2013 version (from now on <strong>modern</strong>) is feasible, but often the server where the legacy version runs is old as well – 32 bit only CPU overall – making the migration path harder because of the move.<br />There is a very handy tool for dealing with this scenario: <strong><a href="http://msdn.microsoft.com/en-us/library/vstudio/ff407080(v=vs.120).aspx">TFSConfig Import</a></strong>.<br />It is meant to convert the legacy server into a new Team Project Collection in the modern instance. It won’t migrate reports or SharePoint, but it is worth using it as it saves a ton of time in the process.<br />It is needed to move the databases onto the current Team Foundation Server – or upgrade the legacy one to a supported version by the modern release you are using – and then launching the command as an administrator:<br />TFSConfig Import /SQLInstance:&lt;servername&gt; /CollectionName:&lt;MigratedCollectionName&gt; /confirmed<br />The <strong>/confirmed</strong> switch is meant to confirm you have backups of the databases you are converting, as after the process they won’t be compatible with the old TFS.

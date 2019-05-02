@@ -1,0 +1,12 @@
+---
+layout: post
+title: Why can’t I delete a Test Plan with MTM and TFS 2013 Update 3?
+date: '2014-11-16T21:55:00.001Z'
+author: Matteo Emili
+tags: 
+modified_time: '2014-11-16T21:55:58.859Z'
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-8682267271340135072
+blogger_orig_url: https://mattvsts.blogspot.com/2014/11/why-cant-i-delete-test-plan-with-mtm.html
+---
+
+<p>Do you want to delete a Test Plan from MTM? Fair enough.</p> <p>Unfortunately the documentation is a bit outdated here – a quick Google to find <a href="http://msdn.microsoft.com/en-us/library/dd286734(v=vs.100).aspx">this</a>, and it is about Visual Studio 2010. It would work – but only if you are connected to a Team Foundation Server without Update 3.</p> <p>If instead you are running 2013.3+, you would be greeted with a message saying … “Deleting a test plan is not supported for current version of Team Foundation Server. Use witadmin tool 'destroywi' command to destroy test plan work item.”</p> <p>It is not a bug, but it is by design instead - it is the only downside of the conversion to Work Item Types of the Test Suites and Test Plans. </p> <p>Basically prior to Team Foundation Server 2013.3 they were ‘special artifacts’, meaning you wouldn’t be able to treat them like Work Items – including advanced querying, charting, etc.</p> <p>The Update 3 converted the whole thing to plain Work Item Types, but this means you no longer get the <em>special</em> feature of deleting it via MTM, instead you should run witadmin destroywi from the Developer Command Line – which is the only way of doing so. That is because deleting a Work Item is not really something that happens every day, and if done in the wrong way (for example, truncating relationships in linked Work Items) it could lead to issues with the Work Item Store. </p>  

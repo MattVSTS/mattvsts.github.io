@@ -1,0 +1,12 @@
+---
+layout: post
+title: SQ-TFS.Scripts, automation scripts for SonarQube and TFS
+date: '2015-04-29T20:26:00.001+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2015-04-29T20:29:09.152+01:00'
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-4055661039810228149
+blogger_orig_url: https://mattvsts.blogspot.com/2015/04/sq-tfsscripts-automation-scripts-for.html
+---
+
+<p>This is my second take at open-sourcing something!</p> <p>Yesterday I read about the fantastic <a href="http://blogs.msdn.com/b/visualstudioalm/archive/2015/04/28/technical-debt-management-announcing-sonarqube-integration-with-msbuild-and-team-build.aspx">joint release</a> from Microsoft and SonarSource for an integration between <strong>SonarQube</strong> and <strong>Team Foundation Server</strong>. As a quality-first advocate, I was immediately on it and yesterday I set up the environment based on the 45 pages long <a href="https://vsarguidance.codeplex.com/downloads/get/1452516">document</a>.</p> <p>It is very well done - like all the Visual Studio ALM Rangers’ content! – but I thought about automating it, so it could be easily replicated in a lab. </p> <p>You’ll still need to manually setup SQL Server (for now) and install Java. They are pretty basic – they follow the walkthrough, without any diversion, except for the InstallSonarRunner script, where I introduced a <strong>v12</strong> and <strong>v14</strong> script for respectively <strong>TFS 2013</strong> and <strong>TFS 2015</strong>, both using the legacy XAML Team Build.</p> <p>You can find them <a href="https://github.com/MattVSTS/SQ-TFS.Scripts">here</a>. Please let me know if you run into issues, I would look into further automation so it can even more seamless than now.</p>  

@@ -1,0 +1,12 @@
+---
+layout: post
+title: A few nuggets from using TFS/VSTS and SonarQube in your builds
+date: '2017-06-22T15:39:00.001+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2017-06-22T15:39:13.090+01:00'
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-1484944738498574935
+blogger_orig_url: https://mattvsts.blogspot.com/2017/06/a-few-nuggets-from-using-tfsvsts-and.html
+---
+
+<p>The cool thing about SonarQube is that once it is set up it works immediately and it provides a lot of value for your teams.</p><p>After a while you will notice there are things that might be refined or improved in how you integrated the two tools, here are some I feel can be quite useful.</p><p><br></p><h3>Bind variables between Team Build and SonarQube properties</h3><p>I feel this is quite important – instead of manually entering Key, Project Name, Version, etc. you should be using your <a href="https://www.visualstudio.com/en-us/docs/build/define/variables">variables</a>. Try to reduce manual input to a minimum.</p><h3>Branch support</h3><p>SonarQube supports branches with the <a href="https://docs.sonarqube.org/display/SONAR/Local+and+Branch+Analysis">sonar.branch</a><em></em> property. This would create a separate SonarQube project you can use for comparison with other branches.</p><h3>Analyse your solution once</h3><p>Don’t be lazy and add just a task at the beginning and one at the bottom - you should scan one solution at the time and complete the analysis. This will solve the typical <strong>Duplicate project GUID</strong> warning you will get if you have multiple solutions in the same scan.</p><h3>Exclude unnecessary files</h3><p>It is so easy to add a <a href="https://docs.sonarqube.org/display/SONAR/Narrowing+the+Focus"><em>sonar.exclusion</em></a> pattern, do it to avoid scanning files you are not interested in. </p>

@@ -1,0 +1,13 @@
+---
+layout: post
+title: Again, again and again on the backups
+date: '2014-09-11T21:58:00.001+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2014-09-11T21:58:04.056+01:00'
+thumbnail: http://lh6.ggpht.com/-PaQjOWolgvU/VBIM2vEdS1I/AAAAAAAABj8/XPLI1lZJ-WI/s72-c/wlEmoticon-smile%25255B2%25255D.png?imgmax=800
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-1655220075459922724
+blogger_orig_url: https://mattvsts.blogspot.com/2014/09/again-again-and-again-on-backups.html
+---
+
+<p>This is a topic which I find coming back every now and then: backups of the Team Foundation Server.</p> <p>Team Foundation Server is a <strong>SQL Server-based product</strong> – hence most of the backups’ work happens there. Full, Copy Only, Differential, Transaction Log: choose your flavour, as long as you are confident it’s good.</p> <p>IMHO it is a good practice to keep things simple: a daily Full Backup with hourly Transaction Logs Backups provide a good level of protection without involving the (IMHO) complicated Differential Backups.</p> <p>If you can, <strong>use the OOB <a href="http://msdn.microsoft.com/en-us/library/bb552295.aspx">tool</a></strong>: it is mature enough to do its job without too many worries. But if you happen to need a manual backup, there are a couple of information to keep in mind…</p> <p>In order to be supported by the Microsoft CSS your backups <strong>must</strong> be synchronized – no exceptions. The safest way of doing that, as it required manual interaction with the TFS databases, is to follow <a href="http://msdn.microsoft.com/en-us/library/ms253070.aspx">this</a> MSDN walkthrough. I introduced a slight <a href="http://mattvsts.blogspot.co.uk/2014/08/tfs-transaction-marking-on-sql-server.html">modification</a> as I manage a big deployment which uses SQL Server AlwaysOn, which is just the verification of the preferred backup instance, but the core steps are the same.</p> <p>The reason behind that is pretty simple: the Team Project Collection databases refer to objects (like IDs, or <strong>identities</strong>) stored in the <strong>TFS_Configuration</strong> database. If you restore a Team Project Collection database which contains something not aligned with the Configuration DB, it is going to end badly…</p> <p>And remember to test the restore – otherwise you <strong>do not </strong>have a backup <img class="wlEmoticon wlEmoticon-smile" style="border-top-style: none; border-bottom-style: none; border-right-style: none; border-left-style: none" alt="Smile" src="http://lh6.ggpht.com/-PaQjOWolgvU/VBIM2vEdS1I/AAAAAAAABj8/XPLI1lZJ-WI/wlEmoticon-smile%25255B2%25255D.png?imgmax=800"></p>  

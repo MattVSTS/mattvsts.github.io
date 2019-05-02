@@ -1,0 +1,13 @@
+---
+layout: post
+title: 'Team Build Nuggets: Automatic publishing of Web Applications with Team Build'
+date: '2012-07-21T10:27:00.001+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2012-07-21T10:27:41.548+01:00'
+thumbnail: http://lh3.ggpht.com/-u4pVmJPkB2k/UAp2DPhQO0I/AAAAAAAAAYc/ij5gQDUXOdY/s72-c/wlEmoticon-smile2.png?imgmax=800
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-2454918386010336142
+blogger_orig_url: https://mattvsts.blogspot.com/2012/07/team-build-nuggets-automatic-publishing.html
+---
+
+<p>As we’ve seen in the previous post, we can automate the creation of a deployment package to automate deployment of web applications.</p> <p>What we’ve seen until now is just the beginning: in this post we’re going to cover the fully automated deployment workflow.</p> <p>But before of that, we need a prerequisite: the Web Deployment Tool.</p> <p>It’s downloadable from the Web PI Installer, and the only configuration needed is <a href="http://blogs.msdn.com/b/webdevtools/archive/2009/06/05/basic-microsoft-web-deployment-tool-setup-for-visual-studio-2010.aspx">this</a> (on the target server).</p> <p>After that, do you remember the <strong>MSBuild Argument</strong> to pass inside the Build Definition? It was:</p> <p align="center"><strong>/p:DeployOnPublish=true</strong></p> <p>Instead right now we need a little more verbose one:</p> <p>/p:DeployOnBuild=True /p:DeployTarget=MsDeployPublish /p:CreatePackageOnPublish=True /p:MSDeployPublishMethod=InProc /p:MSDeployServiceUrl=&lt;server&gt; /p:DeployIisAppPath="Default Web Site/&lt;mypath&gt;" /p:UserName=&lt;domain&gt;\user /p:Password=&lt;password&gt;</p> <p>It creates a package which gets pushed to the server running the WDT, and automatically executed. <img class="wlEmoticon wlEmoticon-smile" style="border-top-style: none; border-left-style: none; border-bottom-style: none; border-right-style: none" alt="Smile" src="http://lh3.ggpht.com/-u4pVmJPkB2k/UAp2DPhQO0I/AAAAAAAAAYc/ij5gQDUXOdY/wlEmoticon-smile2.png?imgmax=800"></p>  

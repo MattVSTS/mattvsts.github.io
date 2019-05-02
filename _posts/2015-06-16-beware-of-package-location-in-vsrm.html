@@ -1,0 +1,13 @@
+---
+layout: post
+title: Beware of the Package Location in VSRM!
+date: '2015-06-16T14:11:00.001+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2015-06-16T14:11:37.209+01:00'
+thumbnail: http://lh3.googleusercontent.com/-jE_PKq2-UZc/VYAgcELmzvI/AAAAAAAACA0/ADmd86Jf70c/s72-c/Capture_thumb%25255B2%25255D.png?imgmax=800
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-2111055115899335022
+blogger_orig_url: https://mattvsts.blogspot.com/2015/06/beware-of-package-location-in-vsrm.html
+---
+
+<p> I am working on a few scenarios using VSRM and DSC, and something funny happened. Picking a build up for release, I noticed this:</p> <p><a href="http://lh3.googleusercontent.com/-jdCOIqfJjR4/VYAgbQsodDI/AAAAAAAACAo/FcthblFqoJU/s1600-h/Capture%25255B4%25255D.png"><img title="Capture" style="border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px; display: inline" border="0" alt="Capture" src="http://lh3.googleusercontent.com/-jE_PKq2-UZc/VYAgcELmzvI/AAAAAAAACA0/ADmd86Jf70c/Capture_thumb%25255B2%25255D.png?imgmax=800" width="584" height="114"></a></p> <p></p> <p></p> <p><em>Localhost? I am pretty sure I didn’t enter localhost anywhere in VSRM!</em></p> <p>And I was right – there was no localhost to be found in my pipeline configuration. But this just caused problems deploying to a different workgroup target server, due to the lack of a proper DNS infrastructure.</p> <p>The culprit here is the XAML Build I was using, its Drop Location was configured with <a href="file://\\localhost">\\localhost</a> because it is an AIO demo box, and as there is no such name resolution facility VSRM cannot access my source server from the target.</p> <p>To fix this you’d just need to change the Drop Location of the build.</p>  

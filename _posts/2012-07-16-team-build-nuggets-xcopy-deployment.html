@@ -1,0 +1,12 @@
+---
+layout: post
+title: 'Team Build Nuggets: XCopy Deployment'
+date: '2012-07-16T15:01:00.001+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2012-07-16T15:01:23.942+01:00'
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-612259940482979663
+blogger_orig_url: https://mattvsts.blogspot.com/2012/07/team-build-nuggets-xcopy-deployment.html
+---
+
+<p>What’s needed to perform an XCopy Deployment with Team Build?</p> <p>Just that as a <strong>MSBuild Argument</strong>:</p> <p>/p:DeployOnBuild=true /p:DeployTarget=PipelinePreDeployCopyAllFilesToOneFolder /p:_PackageTempRootDir=<em>\\&lt;server&gt;\folder</em></p>  

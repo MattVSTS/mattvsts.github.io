@@ -1,0 +1,13 @@
+---
+layout: post
+title: Change the Release Management URL when the console is stuck
+date: '2015-08-04T11:37:00.001+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2015-08-04T11:37:54.829+01:00'
+thumbnail: http://lh3.googleusercontent.com/-laDqCLZQlmE/VcCWAdlJ3KI/AAAAAAAACNY/0O7khCb62RQ/s72-c/clip_image002_thumb%25255B2%25255D.jpg?imgmax=800
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-7506733013352259546
+blogger_orig_url: https://mattvsts.blogspot.com/2015/08/change-release-management-url-when.html
+---
+
+<p>Quick one, but helpful IMHO. After updating Release Management Server or Client you might experience this:</p> <p><a href="http://lh3.googleusercontent.com/-R79r8yFGdkI/VcCV_WlgLOI/AAAAAAAACNM/wK8hXibqlJ0/s1600-h/clip_image002%25255B5%25255D.jpg"><img title="clip_image002" style="border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px; display: inline" border="0" alt="clip_image002" src="http://lh3.googleusercontent.com/-laDqCLZQlmE/VcCWAdlJ3KI/AAAAAAAACNY/0O7khCb62RQ/clip_image002_thumb%25255B2%25255D.jpg?imgmax=800" width="584" height="134"></a></p> <p>and then you would be <strong>stuck</strong> – <strong>you can’t change</strong> the Release Management Server URL.</p> <p>The quick and dirty solution would be changing the URL in the <strong>Microsoft.TeamFoundation.Release.Data.dll.config</strong> file. </p> <p>A better solution is to run <a href="http://blogs.msdn.com/b/visualstudioalm/archive/2014/04/02/did-you-uninstall-release-management-server-and-lose-access-to-the-release-management-client.aspx">this</a> command line tool, which basically <strong>automates the former</strong>. In the worst scenario, <strong>reinstall the Client</strong> and it would prompt asking for a Release Management Server URL.</p>  

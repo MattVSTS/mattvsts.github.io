@@ -1,0 +1,13 @@
+---
+layout: post
+title: A note on reusing your custom fields
+date: '2015-06-03T11:17:00.001+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2015-06-03T11:17:24.109+01:00'
+thumbnail: http://lh3.googleusercontent.com/-tGzt2BptRK8/VW7UJ8ZgWoI/AAAAAAAAB_Q/ynVQjwkpuUs/s72-c/image_thumb%25255B7%25255D.png?imgmax=800
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-2919188100426006082
+blogger_orig_url: https://mattvsts.blogspot.com/2015/06/a-note-on-reusing-your-custom-fields.html
+---
+
+<p>When you customise your Work Item Types you often start with a <em>lone </em>custom Field, and then you forget about it for a while.</p> <p><a href="http://lh3.googleusercontent.com/-kCPEGuccTgE/VW7UI9KCYbI/AAAAAAAAB_E/a5vfsuHQJV0/s1600-h/image%25255B11%25255D.png"><img title="image" style="border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px; display: inline" border="0" alt="image" src="http://lh3.googleusercontent.com/-tGzt2BptRK8/VW7UJ8ZgWoI/AAAAAAAAB_Q/ynVQjwkpuUs/image_thumb%25255B7%25255D.png?imgmax=800" width="584" height="367"></a> </p> <p>But what happens when you need to add the same field to another WIT? The first thing you are naturally inclined to do is to add a new one, with the same name and reporting design but with a <strong>different Reference Name </strong>(because maybe you attended one of my sessions on TFS Administration and you then discover you should mark your custom Reference Names in a significant matter :-) ). </p> <p>The result?</p> <p><a href="http://lh3.googleusercontent.com/-_ABdOjImrps/VW7ULDPuVdI/AAAAAAAAB_c/ncf7cIu_Fmc/s1600-h/image%25255B9%25255D.png"><img title="image" style="border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px; display: inline" border="0" alt="image" src="http://lh3.googleusercontent.com/-Pb7Y13uBVrw/VW7UMcc1XnI/AAAAAAAAB_o/Qf1jmtaYokA/image_thumb%25255B5%25255D.png?imgmax=800" width="497" height="267"></a> </p> <p>How can I reuse my existing field then? The easiest way is to create the custom Field in the second Work Item Type with exactly the same properties, including the Reference Name. So TFS will correctly use the same Field and your experience is going to be consistent.</p>  

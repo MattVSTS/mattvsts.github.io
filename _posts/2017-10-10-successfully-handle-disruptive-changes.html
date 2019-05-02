@@ -1,0 +1,12 @@
+---
+layout: post
+title: 'Successfully handle disruptive changes with no downtime: the TFS 2015 example'
+date: '2017-10-10T11:10:00.001+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2017-10-10T11:10:49.279+01:00'
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-1675397470586713415
+blogger_orig_url: https://mattvsts.blogspot.com/2017/10/successfully-handle-disruptive-changes.html
+---
+
+<p>It is something I’ve <a href="https://mattvsts.blogspot.de/2015/08/pre-upgrading-large-team-project.html">mentioned</a> a few years ago but the question came out again during my presentation at <a href="https://www.x-celerate.de/">x-celerate.de</a>:</p><blockquote><p><em>How should I handle a breaking change without service interruptions?</em></p></blockquote><p>This is a brilliant question, and the best example I can give out is the <a href="https://docs.microsoft.com/en-us/vsts/tfs-server/upgrade/pre-upgrade">TFS 2015 Upgrade</a> that introduced support for renaming Team Projects.</p><p>If you don’t want to have downtime for your users the only mitigation is to introduce an intermediate migration layer which is going to be pouring data from the production stack and transform it into what you want.</p><p>The upside of this is that you are performing a very expensive and time-consuming operation out-of-band, so you can apply all the usual patterns for highly available application deployments.</p><p>The downside is that it is a costly operation, it could be compute, storage or something else but it will cost something out of it.</p><p>In my specific case I was able to perform a scheduled upgrade into the mandatory weekend window (yes, there was still a bit of downtime but it was due to the nature of the product and it was expected – you can overcome the hurdle if you are building your own product though) instead of having days of downtime due to the migration of data from a schema to another, at the cost of lots of storage space for the temporary tables and a dedicated server to run the tool.</p>

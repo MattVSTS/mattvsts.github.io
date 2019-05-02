@@ -1,0 +1,13 @@
+---
+layout: post
+title: Help, the backlog is gone!
+date: '2016-01-22T21:16:00.001Z'
+author: Matteo Emili
+tags: 
+modified_time: '2016-01-22T21:16:51.332Z'
+thumbnail: https://lh3.googleusercontent.com/-3HDGxsWIM-c/VqKcPjVw0lI/AAAAAAAACs4/g16OO-O1KVU/s72-c/wlEmoticon-smile%25255B2%25255D.png?imgmax=800
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-2397395045119655753
+blogger_orig_url: https://mattvsts.blogspot.com/2016/01/help-backlog-is-gone.html
+---
+
+<p>Just beware – if you are migrating stuff from a Team Foundation Server to Visual Studio Team Services, it might happen that despite correctly moving all the Work Items involved in the migration you can’t see the backlog as you would expect.</p> <p>But don’t panic, this doesn’t mean data is lost, it just means that data is not showing up – a completely different matter. That is confirmed by creating some custom queries asking for all of a certain type of Work Item Type (all PBIs for example): you would get all the Work Items you are looking for.</p> <p>So, what is the problem here? Look at the <strong>areas</strong>: if you do not allow areas to automatically <strong>link sub-areas</strong>, your backlog is not going to show what you want.</p> <p>Lots of panic for nothing <img class="wlEmoticon wlEmoticon-smile" style="border-top-style: none; border-left-style: none; border-bottom-style: none; border-right-style: none" alt="Smile" src="https://lh3.googleusercontent.com/-3HDGxsWIM-c/VqKcPjVw0lI/AAAAAAAACs4/g16OO-O1KVU/wlEmoticon-smile%25255B2%25255D.png?imgmax=800"></p>

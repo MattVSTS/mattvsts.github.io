@@ -1,0 +1,12 @@
+---
+layout: post
+title: TFS and HTTP status 417
+date: '2015-07-17T10:44:00.001+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2015-07-17T10:44:55.443+01:00'
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-6408321724159351199
+blogger_orig_url: https://mattvsts.blogspot.com/2015/07/tfs-and-http-status-417.html
+---
+
+<p>Panic today – a guy couldn’t connect to Team Foundation Server with a weird “<strong>The request failed with HTTP status 417: Expectation failed.</strong>”</p> <p>What did it happen? I never saw such a HTTP status code!</p> <p>A bit of <a href="http://msdn.microsoft.com/en-us/library/system.net.servicepointmanager.expect100continue.aspx">investigation</a> explained the reason for it – the proxy he is using doesn’t support the expect100Continue behaviour, dropping the connection. </p> <p>The guy used a proxy server indeed and he did not check the “<strong>Bypass proxy server for local addresses</strong>” checkbox. After checking that, he was able to connect to Team Foundation Server like everybody else.</p> <p>It is also worth mentioning that this can impact also components like the Extension Manager, and you can bypass that setting by adding a node in the <strong>devenv.exe.config</strong> file - <strong>&lt;servicePointManager expect100Continue="false"/&gt;</strong></p>  

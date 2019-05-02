@@ -1,0 +1,13 @@
+---
+layout: post
+title: How to reorder your stages in Azure Pipelines
+date: '2019-02-01T16:10:00.002Z'
+author: Matteo Emili
+tags: 
+modified_time: '2019-02-01T16:10:57.905Z'
+thumbnail: https://3.bp.blogspot.com/-P9uWiszR66k/XFRuuR1sOlI/AAAAAAAAFTs/9NzZEjpcFTAVQby_7adD1otl8vVG6ULOQCLcBGAs/s72-c/stages0.png
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-3933844665710786907
+blogger_orig_url: https://mattvsts.blogspot.com/2019/02/how-to-reorder-your-stages-in-azure.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on">It might seem funny, it might seem stupid... but this might happen to someone else, so it can be handy for the future. How do you re-order your stages in a pipeline?<br /><br />Let's take this example:<br /><a href="https://3.bp.blogspot.com/-P9uWiszR66k/XFRuuR1sOlI/AAAAAAAAFTs/9NzZEjpcFTAVQby_7adD1otl8vVG6ULOQCLcBGAs/s1600/stages0.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="294" data-original-width="1030" height="114" src="https://3.bp.blogspot.com/-P9uWiszR66k/XFRuuR1sOlI/AAAAAAAAFTs/9NzZEjpcFTAVQby_7adD1otl8vVG6ULOQCLcBGAs/s400/stages0.png" width="400" /></a><br /><br /><br /><br /><br /><br /><br /><br /><br />Now, if you want to move Stage 2 to the end, you will try and click on the Stage UI or in the Tasks and you will not find how this is possible.<br /><br />The answer is in the <b>Pre-deployment conditions</b>:<br /><a href="https://3.bp.blogspot.com/-OvM4nMiGhSo/XFRuuScEIMI/AAAAAAAAFT0/HxG9p5lvPJEY-qohoy-dvXqJGNRmftjSwCLcBGAs/s1600/stages1.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="120" data-original-width="82" src="https://3.bp.blogspot.com/-OvM4nMiGhSo/XFRuuScEIMI/AAAAAAAAFT0/HxG9p5lvPJEY-qohoy-dvXqJGNRmftjSwCLcBGAs/s1600/stages1.png" /></a><br /><br /><br /><br /><br /><br /><br /><br /><br />There you can find the triggers that can be linked to a Stage, which in this case is <b>the completion of&nbsp; a previous stage</b>:<br /><br /><a href="https://2.bp.blogspot.com/-0Cmjkwih8mU/XFRuucQFXGI/AAAAAAAAFTw/_iWKaauMJlUnQZu9DQYcswqOOVQt_zZ2gCLcBGAs/s1600/stages2.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="423" data-original-width="375" src="https://2.bp.blogspot.com/-0Cmjkwih8mU/XFRuucQFXGI/AAAAAAAAFTw/_iWKaauMJlUnQZu9DQYcswqOOVQt_zZ2gCLcBGAs/s1600/stages2.png" /></a><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />Changing that value will make your re-ordering needs a reality 😊<br /><br /></div>

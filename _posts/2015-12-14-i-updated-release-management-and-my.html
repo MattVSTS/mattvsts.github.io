@@ -1,0 +1,12 @@
+---
+layout: post
+title: 'I updated Release Management and my builds fail: now what?'
+date: '2015-12-14T21:52:00.002Z'
+author: Matteo Emili
+tags: 
+modified_time: '2015-12-14T21:52:55.167Z'
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-1385687139753858267
+blogger_orig_url: https://mattvsts.blogspot.com/2015/12/i-updated-release-management-and-my.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on">This is a quick but worth tip to remember. <br />If you upgrade Release Management, you always need to update the Client. Up  to this, fair enough.<br /> <br />But&nbsp;you are going to start getting errors like “<strong>The account running  the TFS build service needs to be added as a system user in the Release  Management Server</strong>” in your build.<br /> <br />What you might be missing is that in order to allow communication between the  two you also need to at least open the client, and if you keep getting errors  you might also want to remove and re-add the Release Management URL into it.<br /> <br />This operation will recreate the authentication tokens and you can use VSRM  again.</div>

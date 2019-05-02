@@ -1,0 +1,13 @@
+---
+layout: post
+title: Selective branch indexing with TFS and the Search Server
+date: '2018-03-29T11:21:00.002+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2018-03-29T11:21:41.814+01:00'
+thumbnail: https://4.bp.blogspot.com/-DOxPgV3rulQ/Wry96Qo-1aI/AAAAAAAAE4I/-WvjUoEXEG8ngYR_14Ki-ic7PXQoGod4wCLcBGAs/s72-c/es.PNG
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-7071000668210748151
+blogger_orig_url: https://mattvsts.blogspot.com/2018/03/selective-branch-indexing-with-tfs-and.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on"><br /><div class="MsoNormal">Team Foundation Server’s Search Server can be tough. I mean, it works really well but it takes a certain degree of planning, otherwise it can easily sink your instance’s performance.<o:p></o:p></div><div class="MsoNormal"><br /></div><div class="MsoNormal">I’ve <a href="https://mattvsts.blogspot.co.uk/2017/06/some-tips-on-search-server-for-tfs-2017.html">mentioned</a>&nbsp;in the past that there are scripts from the Product Team that help with the daily administration of the server, they are still the number one choice IMHO from an admin point of view. <o:p></o:p></div><div class="MsoNormal"><br /></div><div class="MsoNormal">But it’s not all command-line. For example, if you look into the Version Control settings of your Team Project, you will discover that each Git repository has a nice setting for selective indexing.<o:p></o:p></div><div class="separator" style="clear: both; text-align: center;"><a href="https://4.bp.blogspot.com/-DOxPgV3rulQ/Wry96Qo-1aI/AAAAAAAAE4I/-WvjUoEXEG8ngYR_14Ki-ic7PXQoGod4wCLcBGAs/s1600/es.PNG" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="122" data-original-width="323" src="https://4.bp.blogspot.com/-DOxPgV3rulQ/Wry96Qo-1aI/AAAAAAAAE4I/-WvjUoEXEG8ngYR_14Ki-ic7PXQoGod4wCLcBGAs/s1600/es.PNG" /></a></div><br /><br /> <div class="MsoNormal"><br /></div><div class="MsoNormal"><br /></div><div class="MsoNormal"><br /></div><div class="MsoNormal"><br /></div><div class="MsoNormal"><br /></div><div class="MsoNormal"><br /></div><div class="MsoNormal"><br /></div><div class="MsoNormal">This makes a lot of sense, so you can only index the common branches and have a rational use of your Elastic Search instance.<o:p></o:p></div><div class="MsoNormal"><br /></div><div class="MsoNormal">There is an excellent reason for that: you don’t want *all of your branches* to be searchable. They will feature a ridiculous amount of duplicates, hence you would be wasting resources. <o:p></o:p></div><div class="MsoNormal"><br /></div><div class="MsoNormal"><br /></div><br /></div>

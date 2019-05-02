@@ -1,0 +1,13 @@
+---
+layout: post
+title: Make your life easier with Group Rules in Azure DevOps Services
+date: '2019-04-22T18:12:00.000+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2019-04-22T18:12:00.883+01:00'
+thumbnail: https://2.bp.blogspot.com/-8YifT3JGi_s/XL31lwbdqmI/AAAAAAAAFeQ/4BnUWx8XQNEh_MUGKKbT9Y4mxZbyfQnTACLcBGAs/s72-c/group.png
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-1446563663760753431
+blogger_orig_url: https://mattvsts.blogspot.com/2019/04/make-your-life-easier-with-group-rules.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on">This is something that comes in very handy - licence management isn't the simplest thing to implement and police. There is always someone who is going to try and sneak around the process in place, in order to <i>quickly&nbsp;</i>get access.<br /><br />Group rules make this really simple. It's basically a templating model applied to the Azure DevOps licensing system:<br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="https://2.bp.blogspot.com/-8YifT3JGi_s/XL31lwbdqmI/AAAAAAAAFeQ/4BnUWx8XQNEh_MUGKKbT9Y4mxZbyfQnTACLcBGAs/s1600/group.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="565" data-original-width="480" src="https://2.bp.blogspot.com/-8YifT3JGi_s/XL31lwbdqmI/AAAAAAAAFeQ/4BnUWx8XQNEh_MUGKKbT9Y4mxZbyfQnTACLcBGAs/s1600/group.png" /></a></div><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />In the example above, I created a rule for a fictitious Workshop - all my users will have a Basic licence (as they might not be Visual Studio subscribers) but they will be automatically added to the Project Administrators group.<br /><br />This might feel simplicistic, but you can add as many projects as you like in a rule. Which means that creating these will help shape the organisation's management, especially in large companies - you can have Visual Studio subscribers automatically added to all projects, and Basic subscribers (which might be contractors for example) scoped to business unit (where costs are usually accounted for and split) for example.<br /><br />If you are an Organisation Administrator, this will save you plenty of time 😁</div>

@@ -1,0 +1,12 @@
+---
+layout: post
+title: Why Universal Packages?
+date: '2018-10-09T10:47:00.006+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2018-10-09T10:48:20.793+01:00'
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-8492036218780974451
+blogger_orig_url: https://mattvsts.blogspot.com/2018/10/why-universal-packages.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on">You might have read about the new Universal Package, something I am quite a fan of. There is no need for a huge software system in order to use them: actually I read about the many situations where they come in handy, but I believe I have a great one-size-fits-all example.<br /><div class="MsoNormal"><o:p></o:p></div><div class="MsoNormal"><br /></div><div class="MsoNormal">We know that Git, a file-system based Version Control System, is not suited for binary storage. The solution I always recommended was to use a TFVC (yes! TFVC!) repository so that you will not only get transactional consistency when consuming these files, but also versioning.&nbsp;</div><div class="MsoNormal"><br /></div><div class="MsoNormal">At the end of the day, these files would be stored in a database hence TFVC fits the bill quite well. But it was kind of a basic solution for this scenario, as it does not offer what Universal Packages do. The whole idea is to create packages to be easily consumed by other users, not fiddle with yet another Version Control System.<o:p></o:p></div><div class="MsoNormal"><br /></div><div class="MsoNormal">Universal Packages not only do this, but they also offer a great deal of compression. Something that is really welcome when it comes to binary files.<o:p></o:p></div><div class="MsoNormal"><br /></div><div class="MsoNormal">My example exactly: let’s say you store media files for your products. Images, videos, stuff that is not textual. You need to consume these files during your pipeline’s execution, in whatever scenario you need them. <o:p></o:p></div><div class="MsoNormal"><br /></div><div class="MsoNormal">Compression (in terms of package size) means performance when consuming them, something that is extremely welcome IMHO. And as you can version packages, you get versioning as well. All by using something that is optimised for that scenario, instead of bending some other sort of technology.</div></div>

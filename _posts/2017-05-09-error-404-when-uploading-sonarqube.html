@@ -1,0 +1,12 @@
+---
+layout: post
+title: Error 404 when uploading the SonarQube Analysis Report from the Build
+date: '2017-05-09T16:31:00.001+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2017-05-09T16:31:16.826+01:00'
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-7279751032195134130
+blogger_orig_url: https://mattvsts.blogspot.com/2017/05/error-404-when-uploading-sonarqube.html
+---
+
+<p>That can be something hard to catch if you don’t know where to look!</p> <p>I spent some time on this issue – SonarQube’s End Analysis task fails, with either an unhandled exception (version 2.1.1 of the extension) or a 404 page in plain text in the log (with the older 2.0.0).</p> <p>What was really odd was that the issue happened only on certain projects – some were fine, some others were failing, And it happened regardless of the build server used by TFS – whatever the agent, this randomness was there.</p> <p>At the end of the day, don’t underestimate logs collected from the Web Server you are using: I found an error 404.13 in the logs, meaning the Analysis Report was <strong>exceeding the size limit </strong>for the upload.</p>

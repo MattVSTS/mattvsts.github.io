@@ -1,0 +1,12 @@
+---
+layout: post
+title: Upgrading SonarQube to 5.2, my notes
+date: '2015-11-17T22:12:00.001Z'
+author: Matteo Emili
+tags: 
+modified_time: '2015-11-17T22:12:50.595Z'
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-2622952221520316896
+blogger_orig_url: https://mattvsts.blogspot.com/2015/11/upgrading-sonarqube-to-52-my-notes.html
+---
+
+<p>Today I updated our production instance of SonarQube to the eagerly awaited version 5.2.</p> <p>It is such an important release because it finally embraces a full client-server paradigm (whereas the runners had to talk straight to the database before of that), it introduces support for Integrated Authentication for its database, and more.</p> <p>The <a href="http://docs.sonarqube.org/display/SONAR/Upgrading">documentation</a> rightly suggests to not copy across the old sonar.properties file but to carefully cross-check the settings you are modifying – it is a very wise suggestion, as the strings are now different (albeit they look similar at first sight).</p> <p>The JDBC driver for SQL Server is now different, it doesn’t use jTDS anymore so keep an eye on your connection string. And there is also support for SQL Azure, which is a very nice touch if you host SonarQube on it. If you want to run Integrated Security you have to fiddle a bit, downloading the SQL JDBC driver and manually copying it in the appropriate folder. Everything is <a href="http://docs.sonarqube.org/display/SONAR/Installing+the+Server">documented</a> though.</p> <p>SonarSource introduced a wizard (a first, I think, in the Java world…) for the upgrade – but beware, the wizard will start only if all the connection and configuration strings are set in the right way.</p> <p>All the <strike>runners </strike>scanners must be updated, pointing straight to the SonarQube instance instead of the database, and eventually another very minor issue – if you have a custom image (the top left one) in your SonarQube instance you need to reset it and set a width, as it isn’t preserved.</p>  

@@ -1,0 +1,13 @@
+---
+layout: post
+title: Standard Environment in Visual Studio ALM 11 using Workgroup machines
+date: '2012-05-02T19:17:00.001+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2012-05-02T19:17:38.977+01:00'
+thumbnail: http://lh3.ggpht.com/-Xx9ixFGioRg/T6F6QJZ1O4I/AAAAAAAAAPQ/yEBwr3XtTgs/s72-c/wlEmoticon-smile%25255B2%25255D.png?imgmax=800
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-6186392862296272882
+blogger_orig_url: https://mattvsts.blogspot.com/2012/05/standard-environment-in-visual-studio.html
+---
+
+<p>As I mentioned before, there’s the possibility of creating Standard Environments using Workgroup-joined machines and not just domain-joined machines.</p> <p>All you need is to use Shadow Accounts (ie. “DOMAIN\account” and “account” on the local machine, or both “account”), better in the form .\account.</p> <p>The magic is behind that is really easy: as the Microsoft’s KB <a href="http://support.microsoft.com/kb/102716">says</a>, “…NetLogon does not differentiate between a nonexistent domain, an untrusted domain, and an incorrectly typed domain name.”.</p> <p>So if you use the same account&amp;password couple, you won’t have problems in using them in Standard Environments <img style="border-bottom-style: none; border-left-style: none; border-top-style: none; border-right-style: none" class="wlEmoticon wlEmoticon-smile" alt="Smile" src="http://lh3.ggpht.com/-Xx9ixFGioRg/T6F6QJZ1O4I/AAAAAAAAAPQ/yEBwr3XtTgs/wlEmoticon-smile%25255B2%25255D.png?imgmax=800"></p>  

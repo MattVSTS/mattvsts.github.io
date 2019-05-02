@@ -1,0 +1,12 @@
+---
+layout: post
+title: 'Solving mess on behalf of others: tf undo'
+date: '2013-04-09T12:36:00.000+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2013-04-09T12:36:12.506+01:00'
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-4677551601494353092
+blogger_orig_url: https://mattvsts.blogspot.com/2013/04/solving-mess-on-behalf-of-others-tf-undo.html
+---
+
+Sometimes it happens the TFS Administrator has to solve problems caused by unexperienced (or untrained) users, and maybe the most common is to undo ‘ghost check-outs’.<br />Here’s the answer: Attrice Corporation Team Foundation Sidekicks. Cool. But sometimes you can’t use third-party tools, and you only have to rely on what Microsoft provided in the OOB installation.<br /><br />So here’s the <em>real </em>answer, since Team Foundation Server 2005:&nbsp;fire the <strong>Developer Command Prompt</strong>, and launch the <strong>tf undo</strong> command with the proper switches. <br /><br /><a href="http://msdn.microsoft.com/en-us/library/c72skhw4(v=vs.110).aspx">Here</a> there is the relative documentation.

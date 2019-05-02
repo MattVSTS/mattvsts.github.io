@@ -1,0 +1,13 @@
+---
+layout: post
+title: 'Rollback Changeset in Team Foundation Server: the time machine'
+date: '2012-10-10T20:26:00.001+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2012-10-10T20:26:13.770+01:00'
+thumbnail: http://lh5.ggpht.com/-22Id7oOgCLQ/UHXL0kwl-0I/AAAAAAAAAeQ/iANkCT0yQoM/s72-c/image_thumb1.png?imgmax=800
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-1264094629631065596
+blogger_orig_url: https://mattvsts.blogspot.com/2012/10/rollback-changeset-in-team-foundation.html
+---
+
+<p>It may happen you have the need of rolling back a previous changeset (due to various reasons). As far as today, you could do it with Get Latest Version – compare – Merge&amp;Fix. Fairly rough, and not intuitive.</p> <p>To be honest, this feature existed since Team Foundation Server 2010. It was just <strong><a href="http://msdn.microsoft.com/en-us/library/dd380776(v=vs.100).aspx">tf rollback</a></strong>, and no GUI was provided.</p> <p>Then the PowerTools integrated it with Visual Studio, but now it has been promoted as a first class feature in Visual Studio 2012.</p> <p>The time machine (as I called it) works as following:</p> <p><a href="http://lh3.ggpht.com/-11BdTdghxxE/UHXLzKBpLzI/AAAAAAAAAeI/-BVRkT1nzxo/s1600-h/image3.png"><img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="image" src="http://lh5.ggpht.com/-22Id7oOgCLQ/UHXL0kwl-0I/AAAAAAAAAeQ/iANkCT0yQoM/image_thumb1.png?imgmax=800" width="342" height="118"></a></p> <p>Then you get it inside the Pending Changes, and you only have to check it in the Team Foundation Server. It’s possible to rollback even selected changesets, ranges, etc.</p>  

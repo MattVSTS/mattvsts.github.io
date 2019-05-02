@@ -1,0 +1,12 @@
+---
+layout: post
+title: Build Agents losing connection after switch to HTTPS
+date: '2018-02-08T12:04:00.001Z'
+author: Matteo Emili
+tags: 
+modified_time: '2018-02-08T12:04:25.829Z'
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-5043019619348064775
+blogger_orig_url: https://mattvsts.blogspot.com/2018/02/build-agents-losing-connection-after.html
+---
+
+<p>A quick one I am dealing with these days – if you switch the Public URL of your Team Foundation Server to HTTPS you might see your Build Agents losing connection with the server.</p><p>This usually happens because of a <a href="https://github.com/Microsoft/vsts-agent/issues/759">known bug in TFS</a> an OAuth token isn’t registered so all the authentication tokens on the agents expire.</p><p>Of course YMMV, so <u>always double check</u> with Support before running a Stored Procedure on your production instance.</p><p>If you happen to get into this problem, you can mitigate it by reverting your HTTPS switch-on and changing the Public URL back to the HTTP version. Doing that will re-establish the connection between the server and the agents.</p>

@@ -1,0 +1,14 @@
+---
+layout: post
+title: How to get IntelliTrace in production for Windows Applications in Visual Studio
+  11
+date: '2012-03-28T12:01:00.001+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2012-03-28T12:01:47.569+01:00'
+thumbnail: http://lh6.ggpht.com/-SOQt2t078z0/T3LvmX-uR4I/AAAAAAAAAKE/DSvw_l2BAFo/s72-c/wlEmoticon-smile2.png?imgmax=800
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-60631565630529342
+blogger_orig_url: https://mattvsts.blogspot.com/2012/03/how-to-get-intellitrace-in-production_28.html
+---
+
+<p>As we saw in the last post, we can get IntelliTrace logs from web applications.</p> <p>But this is possible for Windows Applications, too!</p> <p>Locate the IntelliTrace application under <em>C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\CommonExtensions\Microsoft\IntelliTrace\11.0.0</em>.</p> <p>Then launch it, with the following syntax:</p> <p><strong>intellitrace.exe launch /cp:&lt;CollectionPlanPath&gt; /f:&lt;LogFilePath&gt; &lt;ExecutablePath&gt;</strong></p> <p>That’s all, we finished <img style="border-bottom-style: none; border-left-style: none; border-top-style: none; border-right-style: none" class="wlEmoticon wlEmoticon-smile" alt="Smile" src="http://lh6.ggpht.com/-SOQt2t078z0/T3LvmX-uR4I/AAAAAAAAAKE/DSvw_l2BAFo/wlEmoticon-smile2.png?imgmax=800"></p> <p>After that the itrace file is analysable as usual.</p>  

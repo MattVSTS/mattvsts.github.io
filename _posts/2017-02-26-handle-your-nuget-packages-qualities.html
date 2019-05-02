@@ -1,0 +1,13 @@
+---
+layout: post
+title: Handle your NuGet packages’ qualities with Release Views
+date: '2017-02-26T20:49:00.000Z'
+author: Matteo Emili
+tags: 
+modified_time: '2017-02-26T20:49:18.967Z'
+thumbnail: https://1.bp.blogspot.com/-8UhZ5e7aUP8/WLM-s4cLQAI/AAAAAAAAEXg/1nD5bpxe-LgOqossSVmUJY_hM22xQSQRwCLcB/s72-c/views.PNG
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-8268917299285621465
+blogger_orig_url: https://mattvsts.blogspot.com/2017/02/handle-your-nuget-packages-qualities.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on">Are you building NuGet packages for your tools, utilities and libraries?  Check.<br /><br />Are you using SemVer for versioning? Check.<br /><br />Then you might want an easy way of offering your (internal) packages, sorting  them between Release and Prerelease for example. <a href="https://www.visualstudio.com/en-us/docs/package/feeds/views">Release  Views</a> is what you are looking for.<br /><br />What is really brilliant is that you already have a baseline set: Release and  Prerelease. You don’t have to configure anything, it is already there for  you.<br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="https://1.bp.blogspot.com/-8UhZ5e7aUP8/WLM-s4cLQAI/AAAAAAAAEXg/1nD5bpxe-LgOqossSVmUJY_hM22xQSQRwCLcB/s1600/views.PNG" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="213" src="https://1.bp.blogspot.com/-8UhZ5e7aUP8/WLM-s4cLQAI/AAAAAAAAEXg/1nD5bpxe-LgOqossSVmUJY_hM22xQSQRwCLcB/s400/views.PNG" width="400" /></a></div><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />What makes lots of sense IMHO is to divide them into Release, Prerelease and  CI.<br /><br />That’s because even if we would all love to have a single feed where you can  get all the packages in an independent fashion, it is highly likely that some  users might not need a CI package but something more refined instead.<br />With the latter it is clear that the package is not as good as a beta, making it easier to section your offer for the user as you like. CI is really bleeding edge sometimes, and I believe it is good to have it separated from other builds.</div>

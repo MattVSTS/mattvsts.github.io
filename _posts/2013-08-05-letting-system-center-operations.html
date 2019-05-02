@@ -1,0 +1,14 @@
+---
+layout: post
+title: Letting System Center Operations Manager 2013 and Team Foundation Server 2013
+  Preview talk together
+date: '2013-08-05T21:49:00.000+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2013-08-05T21:49:00.768+01:00'
+thumbnail: http://lh6.ggpht.com/-1E7Si2yqrD8/UfA96jVPDsI/AAAAAAAABFU/eYSwzuWQmlo/s72-c/clip_image002_thumb.jpg?imgmax=800
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-4073515745577032182
+blogger_orig_url: https://mattvsts.blogspot.com/2013/08/letting-system-center-operations.html
+---
+
+Despite TFS 2013 is still a Preview, it is fully compatible with the other Microsoft products.<br />For enabling the DevOps story, you need to follow the TechNet <a href="http://technet.microsoft.com/en-us/library/jj883936.aspx">procedure</a> as usual, <strong>but</strong> you need:<br /><ul><li>to install the <a href="http://visualstudiogallery.msdn.microsoft.com/f30e5cc7-036e-449c-a541-d522299445aa">TFS 2012 Object Model</a></li><li>restart the SCOM HealthService via PowerShell (<strong>restart-service HealthService</strong>)</li><li>after you successfully connect to the server with the wizard, you should get a <strong>TF223006</strong> error regarding the command-line tools. Don’t worry. Save the configuration, and manually <a href="http://technet.microsoft.com/en-us/library/jj899890.aspx">add</a> the OperationalIssue_11 Work Item Type from the Operations Manager installation media.</li></ul><a href="http://lh3.ggpht.com/-O7IyYc80cis/UfA96b5F7II/AAAAAAAABFQ/a26s4k9HPLw/s1600-h/clip_image002%25255B3%25255D.jpg"><img alt="clip_image002" border="0" height="129" src="http://lh6.ggpht.com/-1E7Si2yqrD8/UfA96jVPDsI/AAAAAAAABFU/eYSwzuWQmlo/clip_image002_thumb.jpg?imgmax=800" style="background-image: none; border: 0px currentColor; display: inline; margin: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;" title="clip_image002" width="244" /></a><br /><a href="http://lh6.ggpht.com/-K6sd2-qewS0/UfA97E9Js6I/AAAAAAAABFg/rFqB9tTWObM/s1600-h/image%25255B3%25255D.png"><img alt="image" border="0" height="217" src="http://lh4.ggpht.com/-q_aUcmSr8Yg/UfA97Qg2AaI/AAAAAAAABFk/L2Xn9KmsVt4/image_thumb%25255B1%25255D.png?imgmax=800" style="background-image: none; border: 0px currentColor; display: inline; padding-left: 0px; padding-right: 0px; padding-top: 0px;" title="image" width="366" /></a><br />and it works!

@@ -1,0 +1,12 @@
+---
+layout: post
+title: Help! My TFS automatically redirects HTTPS to HTTP!
+date: '2017-12-21T08:01:00.000Z'
+author: Matteo Emili
+tags: 
+modified_time: '2017-12-21T08:01:00.187Z'
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-1261515285084847059
+blogger_orig_url: https://mattvsts.blogspot.com/2017/12/help-my-tfs-automatically-redirects.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on">If you are deploying HTTPS to TFS and you want to keep HTTP for a while, you might experience a strange behaviour: despite following the <a href="https://www.visualstudio.com/team-services/support/can-setup-https-secure-sockets-layer-ssl-team-foundation-server/">documentation</a>, every time you browse to your TFS Web Access with HTTPS you are redirected to HTTP.<br /><br />Fairly simple answer to this, and it is not because of any extra tool or technology: it has to do with the <a href="https://docs.microsoft.com/en-us/vsts/security/websitesettings">Public URL</a> (it used to be called Notification URL) you set on the TFS itself.<br /><br />If you leave the HTTP version over there you will always get the HTTP version – even with HTTPS&nbsp; – otherwise if you switch to an HTTPS URL there you will get the HTTPS version by default, and explicitly browsing the HTTP version keeps you on the non-secured protocol so you can keep them side by side.</div>

@@ -1,0 +1,12 @@
+---
+layout: post
+title: Problem solved! Git-LFS and VSO
+date: '2015-10-02T23:25:00.001+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2015-10-02T23:25:49.081+01:00'
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-705385099078964165
+blogger_orig_url: https://mattvsts.blogspot.com/2015/10/problem-solved-git-lfs-and-vso.html
+---
+
+<p>One of the problems you might face with Git is the performance hit when you start storing binaries into the Version Control.</p> <p>It is actually by design – Git takes content snapshots at every commit, and it can’t handle deltas on binary files like on text files.</p> <p>Fair enough, it has lots of other pros (and cons too), but the inability of storing binaries in an easy and non-disruptive way hampered the need for a shared tool in an heterogeneous development teams. If you have people working on the UI of your applications and you want them to version the .psd files they use, you can’t use Git.</p> <p>Well, you couldn’t. GitHub developed <a href="https://git-lfs.github.com/">Git Large File Storage</a> for sorting this issue, but it wasn’t by default and eventually you would need to pay for usage (over 1GB quota of free space and bandwidth). It isn’t a out-of-the-box solution.</p> <p>But yesterday Microsoft <a href="http://blogs.msdn.com/b/visualstudioalm/archive/2015/10/01/announcing-git-lfs-on-all-vso-git-repos.aspx">announced</a> Git-LFS support on VSO, and it is a game changer to me.</p> <p>Firstly, it is enabled by default on all the Visual Studio Online’s Git repositories. What you need to do is to install the Git-LFS extension, and nothing else.</p> <p>Then, it is free for unlimited storage, so you don’t have to worry about limits, quotas and usage. It’s there, use it (if it makes sense, obviously).</p> <p>Eventually, it will be included in Team Foundation Server 2015 Update 1, meaning that you will get exactly the same experience on-premise. </p> <p>That’s marvellous, really. It solves the aforementioned issue in an effortless and easy way, making Git even more approachable.</p>  

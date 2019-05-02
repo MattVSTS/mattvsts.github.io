@@ -1,0 +1,13 @@
+---
+layout: post
+title: TFS Transaction Marking on SQL Server AlwaysOn Data Tier
+date: '2014-08-28T10:31:00.001+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2014-08-28T10:31:06.989+01:00'
+thumbnail: http://lh4.ggpht.com/-AG_2o2GL79Q/U_722Ejd0FI/AAAAAAAABjo/wCEFqGPA2bo/s72-c/image_thumb%25255B2%25255D.png?imgmax=800
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-3010572629412097439
+blogger_orig_url: https://mattvsts.blogspot.com/2014/08/tfs-transaction-marking-on-sql-server.html
+---
+
+<p>If you need to manually backup the Team Foundation Server – you might have several reasons for not using the OOB tool – you need to follow <a href="http://msdn.microsoft.com/en-us/library/ms253070.aspx">this</a> walkthrough on MSDN.</p> <p>What I’d like to share is a small script you might use while you have to backup your Team Foundation Server running on an <strong>AlwaysOn</strong>-backed Data Tier.</p> <p>I created a hourly job in both nodes, running <strong>one minute prior</strong> to the Transaction Log Backup job, as it follows:</p> <p><a href="http://lh4.ggpht.com/-ZT4oHjXy1Bg/U_721lA3e8I/AAAAAAAABjk/-gPIF0CT028/s1600-h/image%25255B6%25255D.png"><img title="image" style="border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px; display: inline" border="0" alt="image" src="http://lh4.ggpht.com/-AG_2o2GL79Q/U_722Ejd0FI/AAAAAAAABjo/wCEFqGPA2bo/image_thumb%25255B2%25255D.png?imgmax=800" width="244" height="218"></a> </p> <p>In our case, we backup the Primary Replica, so before initiating the transaction I check for the preferred Replica. If it is 1, it’s the primary, otherwise it is the secondary (2) or it is resolving (0), both cases where my job cannot run.</p> <p>It might be a little bit overzealous, because if you run the very same job on a non-preferred Replica (the secondary in our case) you are going to get an execution error stating the databases are read-only, but better safe than sorry!</p>  

@@ -1,0 +1,13 @@
+---
+layout: post
+title: IISReset and TFSServiceControl quiesce
+date: '2014-03-22T13:11:00.001Z'
+author: Matteo Emili
+tags: 
+modified_time: '2014-03-22T13:11:43.753Z'
+thumbnail: http://lh6.ggpht.com/-KleUxw6yZ6I/Uy2MDo2-yeI/AAAAAAAABUg/bvKGWXRr-NY/s72-c/wlEmoticon-smile%25255B2%25255D.png?imgmax=800
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-1499834159422332958
+blogger_orig_url: https://mattvsts.blogspot.com/2014/03/iisreset-and-tfsservicecontrol-quiesce.html
+---
+
+<p>“<em>Isn’t it the same if I just run IISReset /stop to take the Team Foundation Server down?</em>”</p> <p>No, it isn’t.</p> <p>If you just run <strong>IISReset /stop</strong>, you are just locking the IIS access – but the Team Foundation Server is still up and running, it is just not reachable.</p> <p>This is why <strong><a href="http://msdn.microsoft.com/en-us/library/ff470382.aspx">TFSServiceControl quiesce</a></strong> is needed: by running it, you are effectively taking down the server, stopping the Application Pools, all the jobs and the agents running on it. Moreover, MSDN states “<em>You cannot manually perform all of the tasks carried out by the <strong>TFSServiceControl</strong> command.</em>”, so little choice here <img class="wlEmoticon wlEmoticon-smile" style="border-top-style: none; border-bottom-style: none; border-right-style: none; border-left-style: none" alt="Smile" src="http://lh6.ggpht.com/-KleUxw6yZ6I/Uy2MDo2-yeI/AAAAAAAABUg/bvKGWXRr-NY/wlEmoticon-smile%25255B2%25255D.png?imgmax=800"></p> <p>Other than being sure of the TFS’ status and consistency, by running it together with IISReset you are ensuring that the IIS won’t be overstressed and it won’t forward any query to the TFS itself.</p> <p>Basically, you are locking the <strong>safe</strong> (TFS) and the <strong>room’s door</strong> (IIS).</p>  

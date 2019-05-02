@@ -1,0 +1,12 @@
+---
+layout: post
+title: Why can’t I output the result of git log from a PowerShell script?
+date: '2015-03-05T12:54:00.001Z'
+author: Matteo Emili
+tags: 
+modified_time: '2015-03-05T13:37:55.964Z'
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-2833038798979539998
+blogger_orig_url: https://mattvsts.blogspot.com/2015/03/why-cant-i-output-result-of-git-log.html
+---
+
+<p>Git log is a <em>special</em> command, it uses a pager and it seems the PowerShell ISE <strong>hangs</strong> when you run into that kind of commands. If you try creating a script relying on running git log in whatever form, you won’t get anything.</p> <p>The workaround is not the very best, but it does the trick:</p> <p>$logcommand = "git --no-pager log ... [&gt; file.ext if needed]" <br>Invoke-Expression $log</p> <p>Other commands like git diff are <strong>not affected</strong> by this. This made me lose quite a bit of time this morning…but I am happy to be unblocked now.</p>  

@@ -1,0 +1,12 @@
+---
+layout: post
+title: How to change a TFS GUID and why is it extremely important?
+date: '2013-11-01T16:18:00.001Z'
+author: Matteo Emili
+tags: 
+modified_time: '2013-11-01T16:18:45.498Z'
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-8333578711417387209
+blogger_orig_url: https://mattvsts.blogspot.com/2013/11/how-to-change-tfs-guid-and-why-is-it.html
+---
+
+<p>If you are working on a test upgrade of an existing Team Foundation Server by restoring it on another machine, keep in mind it is not enough to discern it from the existing instance.</p> <p>Yes – you are changing machine names and IPs – but it would be needed to change the GUIDs as well, otherwise the Visual Studio cache is going to go crazy. You have one GUID per Team Project Collection, and they are stored inside the <strong>TFS_Configuration database</strong>.</p> <p>You need to quiesce the server first, then use the <strong><a href="http://msdn.microsoft.com/en-us/library/vstudio/ee349259.aspx">TFSConfig ChangeServerID</a> </strong>tool:</p> <p><strong>tfsconfig changeserverid&nbsp; /sqlinstance:&lt;your-sql instance&gt; /DatabaseName:Tfs_Configuration /projectcollectionsonly </strong></p> <p>You can specify if you are running on SQL AlwaysOn as well.</p>  

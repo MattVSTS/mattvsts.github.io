@@ -1,0 +1,12 @@
+---
+layout: post
+title: Remote UAC with Standard Environment and Workgroup Machines
+date: '2012-09-02T18:19:00.001+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2012-09-02T18:19:31.827+01:00'
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-6158997165108145681
+blogger_orig_url: https://mattvsts.blogspot.com/2012/09/remote-uac-with-standard-environment.html
+---
+
+<p>As using workgroup machines in Standard Environment is a borderline scenario, there are some issues and stuff to care about, like the careful usage of <a href="http://mattvsts.blogspot.it/2012/05/standard-environment-in-visual-studio.html">shadow accounts</a> or the right management of <a href="http://support.microsoft.com/kb/951016">Remote UAC</a>.</p> <p>In certain scenarios, having Remote UAC enabled may lead to wrong or misleading behaviors, as basically it doesn’t leases a admin token but (correctly, from a security perspective) just a limited one.</p> <p>For example, the automated installation of the test agent inside a workgroup machine from another workgroup machine running MTM would fail, as this is a scenario where authentication and authorization (two different concept as we know). To workaround this and other cases, the solution is pretty simple. The only need is to set the <strong>HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\system\LocalAccountTokenFilterPolicy</strong> key to <strong>1.</strong></p> <p>This procedure is totally supported, as it’s stated inside this MSDN page on <a href="http://msdn.microsoft.com/en-us/library/hh546460.aspx">Test Controller configuration</a>.</p>  

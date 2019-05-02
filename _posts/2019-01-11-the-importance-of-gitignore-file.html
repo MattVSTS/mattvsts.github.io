@@ -1,0 +1,12 @@
+---
+layout: post
+title: The importance of the .gitignore file
+date: '2019-01-11T12:46:00.000Z'
+author: Matteo Emili
+tags: 
+modified_time: '2019-01-11T12:46:03.714Z'
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-8273173590387119357
+blogger_orig_url: https://mattvsts.blogspot.com/2019/01/the-importance-of-gitignore-file.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on">A few days ago I spent a some time reviewing some old repositories of mine (mostly demos) and I realised how cluttered they were.<br /><br />You know why? Because they were created years ago, went unmaintained for ages and they were lacking a .gitignore file.<br /><br />Early in the days of learning Git, one of the things I left behind was - guess what - a proper usage of .gitignore files. Moving on I realised how important they are: they prevent your repository from becoming filled with temporary files you don't really need. If you go back to old repos you created when you were not as proficient as you are today, you are guaranteed to stumble into that like I did.<br /><br />For example: if you create an empty MVP Application using ASP.NET Core and you run a <i>git add --all </i>you will surely add files like sqlite's db.lock file, which is utterly useless in a Version Control System.<br /><br />Or the whole .vs folder, .suo files, the obj folders and so on...you don't need this stuff in a Git repository!<br /><br />At the end of the day a .gitignore file is literally a list of files to ignore in order to maintain your repository lean and nimble. Spend five minutes (tops!) on it, and you will get the rewards way down the line.<br /><br />If you are <b>*that*</b> lazy and you think you can't spend five minutes on it, there is a nice service (what isn't commoditised today?!) called <a href="http://gitignore.io/">gitignore.io</a>&nbsp;that will create a default one for you based off your favourite IDE or environment.<br /><br />Really, do it! 😁</div>

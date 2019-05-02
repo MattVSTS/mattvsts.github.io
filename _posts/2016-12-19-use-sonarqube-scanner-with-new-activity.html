@@ -1,0 +1,13 @@
+---
+layout: post
+title: Use the SonarQube Scanner with the new activity for the Team Build
+date: '2016-12-19T10:12:00.001Z'
+author: Matteo Emili
+tags: 
+modified_time: '2016-12-19T10:12:08.288Z'
+thumbnail: https://lh3.googleusercontent.com/-jhyneU27tMY/WFeybxZq-NI/AAAAAAAAEQY/K2Llp8kSLO4/s72-c/image_thumb.png?imgmax=800
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-6795710908817556492
+blogger_orig_url: https://mattvsts.blogspot.com/2016/12/use-sonarqube-scanner-with-new-activity.html
+---
+
+<p>As I <a href="http://mattvsts.blogspot.co.uk/2016/12/what-happened-to-sonarqube-extension.html">mentioned</a> the new SonarSource-maintained activity allows for the SonarQube scanner to be run independently of MSBuild – very useful for repositories containing only JavaScript files for example, where you cannot use the MSBuild-based task because of the lack of a .*proj file.</p> <p>So all you need to do is to add the relevant task to your build definition:</p> <p><a href="https://lh3.googleusercontent.com/-7Gfa0DZSXqo/WFeyarsmSVI/AAAAAAAAEQQ/3ozt3FJL0tQ/s1600-h/image%25255B2%25255D.png"><img title="image" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; margin: 0px; display: inline; padding-right: 0px" border="0" alt="image" src="https://lh3.googleusercontent.com/-jhyneU27tMY/WFeybxZq-NI/AAAAAAAAEQY/K2Llp8kSLO4/image_thumb.png?imgmax=800" width="244" height="61"></a></p> <p>You only need to configure the required options in the task - it comes with a pre-configured sonar-scanner.properties file so you are ready to go! </p> <p>You need to create a SonarQube Endpoint like described in the other post, add the typical project key/name/version property triplet and, if you want, you can change the folder containing the source files. Also, if you have your own sonar-scanner.properties ready for use you can supply it in the Advanced pan:</p> <p><a href="https://lh3.googleusercontent.com/-LysHsrkTdSE/WFeycqzAMjI/AAAAAAAAEQg/ldRjsv0Efv8/s1600-h/image%25255B5%25255D.png"><img title="image" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; margin: 0px; display: inline; padding-right: 0px" border="0" alt="image" src="https://lh3.googleusercontent.com/-ONrORbE7iyk/WFeyd4MigJI/AAAAAAAAEQo/eVSgM_MJrJM/image_thumb%25255B1%25255D.png?imgmax=800" width="244" height="131"></a></p> <p>Scenarios where you might want to use this task are where you don’t have a MSBuild-based project system supporting your code, so the other task would not work. Also, it is very handy with heterogeneous projects.</p>

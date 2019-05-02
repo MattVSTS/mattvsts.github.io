@@ -1,0 +1,13 @@
+---
+layout: post
+title: Visual Studio Lab Management and Auto Provisioning
+date: '2014-11-05T13:09:00.001Z'
+author: Matteo Emili
+tags: 
+modified_time: '2014-11-05T13:09:14.346Z'
+thumbnail: http://lh6.ggpht.com/-TeI0YRoNuvY/VFoheBbbA-I/AAAAAAAABnE/BgnxQxer-Xg/s72-c/image_thumb%25255B1%25255D.png?imgmax=800
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-3810887283227911855
+blogger_orig_url: https://mattvsts.blogspot.com/2014/11/visual-studio-lab-management-and-auto.html
+---
+
+<p>Despite it is very handy, the Auto Provisioning feature of Lab Management can become a trouble pretty quickly. If enabled, every Team Project will be authorised to deploy VMs in the VSTLM hosts, a situation which – 99% of the times – becomes unmanageable.</p> <p><a href="http://lh5.ggpht.com/-3pORAzuXhvM/VFohdhAgxJI/AAAAAAAABnA/cqt0pxHkB7E/s1600-h/image%25255B3%25255D.png"><img title="image" style="border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px; display: inline" border="0" alt="image" src="http://lh6.ggpht.com/-TeI0YRoNuvY/VFoheBbbA-I/AAAAAAAABnE/BgnxQxer-Xg/image_thumb%25255B1%25255D.png?imgmax=800" width="538" height="484"></a> </p> <p>It’s not a TFS problem, and it depends on how the users are used to work. But if your deployment is used (as it should be, to be fair) and considered ‘as a service’, then IMHO you need to limit the scope a little bit, otherwise your Hyper-V servers are going be clogged like Beijing at the rush hour…or the M25.</p> <p>There is a pretty quick fix for this though – <strong>after</strong> you grant the permissions to the specific Team Project to use Lab Management, you need to use two TFSLabConfig (<a href="https://twitter.com/MattVSTS/status/468424068807811072">and not TFSConfig Lab</a>) commands: <a href="http://msdn.microsoft.com/en-us/library/dn249785.aspx">tfslabconfig TPHostGroup</a> and <a href="http://msdn.microsoft.com/en-us/library/dn249786.aspx">tfslabconfig TPLibraryShare</a>.</p> <p>After that, you are ready to go!</p>  

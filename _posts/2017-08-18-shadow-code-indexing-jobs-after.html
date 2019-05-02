@@ -1,0 +1,13 @@
+---
+layout: post
+title: Shadow code indexing jobs after upgrading to TFS 2017.2
+date: '2017-08-18T15:31:00.001+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2017-08-18T15:31:49.863+01:00'
+thumbnail: https://lh3.googleusercontent.com/-b4sNRPWrMOs/WZb6VJg3luI/AAAAAAAAEi0/WQFdFFalKdQqiLSfJZzXBDvYlYN_8g6NACHMYCw/s72-c/wlEmoticon-smile%255B2%255D?imgmax=800
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-5760592492256903395
+blogger_orig_url: https://mattvsts.blogspot.com/2017/08/shadow-code-indexing-jobs-after.html
+---
+
+<p>Just a quick one – if you remove the Search Server before upgrading to TFS 2017.2, you might see failing Git_RepositoryCodeIndexing or TFVC_RepositoryCodeIndexing jobs raising a <i>Microsoft.VisualStudio.Services.Search.Common.FeederException: Lots of files rejected by Elasticsearch, failing this job </i>error.</p><p>The reason why this happens is because the extension is automatically enabled on the collections, triggering these jobs.</p><p>So check your extensions after the upgrade <img class="wlEmoticon wlEmoticon-smile" style="" alt="Smile" src="https://lh3.googleusercontent.com/-b4sNRPWrMOs/WZb6VJg3luI/AAAAAAAAEi0/WQFdFFalKdQqiLSfJZzXBDvYlYN_8g6NACHMYCw/wlEmoticon-smile%255B2%255D?imgmax=800"></p>

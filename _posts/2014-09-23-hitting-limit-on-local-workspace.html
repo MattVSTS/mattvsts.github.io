@@ -1,0 +1,12 @@
+---
+layout: post
+title: Hitting the limit on a Local Workspace
+date: '2014-09-23T10:21:00.001+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2014-09-23T10:21:30.265+01:00'
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-1118628156890791559
+blogger_orig_url: https://mattvsts.blogspot.com/2014/09/hitting-limit-on-local-workspace.html
+---
+
+<p>Everybody remember the introduction of the local workspaces in 2012, enabling offline scenarios with Team Foundation Server. But did you know they have a limit on the number of files prior to performance degradation?</p> <p>This limit is 100000 elements.</p> <blockquote> <p><code>TF401190: The local workspace temp_WS;User has 248536 items in it, <br>which exceeds the recommended limit of 100000 items. To improve <br>performance, either reduce the number of items in the workspace, <br>or convert the workspace to a server workspace.</code></p></blockquote> <p>There it is. It’s not a bug, but it is a design choice by the Team Foundation Server team.</p> <p>Local workspaces work leveraging the content of the hidden $tf folder, which tracks all the changes for a file (deltas) from check-out to check-in. That’s how you get features like <a href="http://mattvsts.blogspot.co.uk/2012/11/candidate-changes-with-local-workspaces.html">Candidate Changes</a>. The side effect is that despite the source copy is compressed, it is still a copy, hence you have a physically bigger workspace. </p> <p>The workarounds in this case is to use a server workspace (easy) or to split the huge, monolithic workspace into several smaller workspace so you won’t hit the issue. This could be harder than just using a server workspace, but with a bit of planning it is absolutely feasible.</p> <p><a href="http://blogs.msdn.com/b/phkelley/archive/2013/05/29/server-workspaces-vs-local-workspaces.aspx">This post</a> by Philip Kelley is extremely enlightening, as it is a deep comparison between local and server workspaces. Right there he explains the differences, and how they are implemented (the PendChange permission, the +R bit, etc.).</p>  

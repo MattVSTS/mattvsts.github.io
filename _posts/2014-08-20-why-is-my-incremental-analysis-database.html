@@ -1,0 +1,13 @@
+---
+layout: post
+title: Why is my Incremental Analysis Database Sync going on forever?
+date: '2014-08-20T15:32:00.000+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2014-08-20T15:32:28.701+01:00'
+thumbnail: http://4.bp.blogspot.com/-Qrq2Nj5dl2Q/U_Sw8MV9tGI/AAAAAAAABjU/XSLv5no1FB0/s72-c/process.PNG
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-1726395382881937745
+blogger_orig_url: https://mattvsts.blogspot.com/2014/08/why-is-my-incremental-analysis-database.html
+---
+
+<div style="text-align: left;"><br /></div><div style="text-align: left;"><a href="file:///C:/Users/memili/AppData/Local/Temp/WindowsLiveWriter1286139640/supfilesD99F3834/image[3].png" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"></a>Sometimes it happens...</div><div style="text-align: left;">&nbsp;</div><div class="separator" style="clear: both; margin-left: 1em; margin-right: 1em; text-align: left;"><img border="0" src="http://4.bp.blogspot.com/-Qrq2Nj5dl2Q/U_Sw8MV9tGI/AAAAAAAABjU/XSLv5no1FB0/s1600/process.PNG" height="217" width="400" /></div><div style="text-align: left;">And that’s just because I stopped it. Why does it happen?</div><div style="text-align: left;">&nbsp;</div><div style="text-align: left;">The <a href="file:///C:/Users/granth/Desktop/AdminReportPack/#Four"><span style="color: #3778cd;">reason</span></a> is  pretty easy: if the job is running, but you have a network problem&nbsp;– an outage,  like it happened to me&nbsp;– the TFS Job Agent might&nbsp;not report the state and it may  goes on for hours, even if it has released all the resource locks.</div><div style="text-align: left;">&nbsp;</div><div style="text-align: left;">You can safely stop the job by invoking the Web Service on the TFS  Application Tier&nbsp;– you’ll need to set the  <strong>SetAnalysisJobEnabledState</strong>&nbsp;to <strong>FullyDisabled</strong>  first and then to <strong>Enabled </strong>in order to restart with the next  scheduled job.</div><div style="text-align: left;">&nbsp;</div><div style="text-align: left;">And remember&nbsp;– do <strong>NOT </strong>process the TFS_Analysis OLAP cube  with SSMS, as it is <strong>not supported</strong> by the Microsoft CSS.</div>

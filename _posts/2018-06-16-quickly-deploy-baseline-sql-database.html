@@ -1,0 +1,12 @@
+---
+layout: post
+title: Quickly deploy a baseline SQL database with VSTS
+date: '2018-06-16T17:53:00.002+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2018-06-16T17:53:28.058+01:00'
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-5161986427437400046
+blogger_orig_url: https://mattvsts.blogspot.com/2018/06/quickly-deploy-baseline-sql-database.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on"><i>"Sometimes we go full steam ahead with a complex solution for a very simple problem..."</i><br /><br />That was the answer I gave to a friend of mine who asked me how to feed some baseline database for testing purposes with VSTS in Azure.<br /><br />The obvious one would be to have your versioned SQL scripts in a dedicated repository which you can use to rebuild the whole thing from code (which is by all accounts the most correct solution to this problem). But in this case there are other avenues.<br /><br />Databases have been treated like second class citizens for years - by tools and practices. For example, why not using BACPAC files for this exercise? At the end of the day, a BACPAC file contains the packaged version of a database at a certain point in time, including its data.<br /><br />So if you have your BACPAC somewhere, get to an Azure storage account and run this SQLPackage command inside a VSTS PowerShell Script task (of course you need to replace the variables and provide the actual path):<br /><br /><b>&amp; 'C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\Extensions\Microsoft\SQLDB\DAC\130\sqlpackage.exe' /Action:Import&nbsp; /TargetServerName:$(DBUrl) /TargetDatabaseName:$(DBName) /TargetUser:$(DBAdmin) /TargetPassword:$(DBPassword) /SourceFile:"&lt;your location&gt;/sample.bacpac"</b><br /><br />Don't get me wrong, I love seeing a database fully integrated with the pipeline and that's how it should be. But in this specific case, I feel the tradeoff is worth it.<br /><br />Also - this is a baseline database, nobody prevents us from running delta scripts against it depending on needs. But given it was for testing purposes, I highly doubt there is going to be much development on it in the future!</div>

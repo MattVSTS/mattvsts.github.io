@@ -1,0 +1,12 @@
+---
+layout: post
+title: A quick reflection on git reset
+date: '2019-03-08T21:58:00.004Z'
+author: Matteo Emili
+tags: 
+modified_time: '2019-03-08T21:58:41.778Z'
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-357293030418098372
+blogger_orig_url: https://mattvsts.blogspot.com/2019/03/a-quick-reflection-on-git-reset.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on">This is fairly quick, but I haven't realised how important it is up to now - a friend made up such a mess of his repository adding and changing files before committing that he wanted to delete the folder and start from scratch.<br /><br />Is it worth it? Not really, you can move around Git's history with this command:<br /><br /><i>git reset --hard &lt;SHA of the target commit&gt;</i><br /><br />Why do I say it is an important thing to keep in mind? Think of it this way: if the user comes from TFVC, this is equivalent to a local Undo All and to Get Specific Version and Get Latest Version (with HEAD instead of the SHA) commands.</div>

@@ -1,0 +1,13 @@
+---
+layout: post
+title: PowerShell DSC in legacy pipelines, or with no pipeline at all
+date: '2015-02-12T22:09:00.001Z'
+author: Matteo Emili
+tags: 
+modified_time: '2015-02-12T22:09:45.559Z'
+thumbnail: http://lh4.ggpht.com/-e3vBGPyfkEA/VN0kqFtWcUI/AAAAAAAAByw/FUhLlnVL5QM/s72-c/image_thumb%25255B2%25255D.png?imgmax=800
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-6325267013189434766
+blogger_orig_url: https://mattvsts.blogspot.com/2015/02/powershell-dsc-in-legacy-pipelines-or.html
+---
+
+<p>It is true that PowerShell DSC is the newest kid on the block, but it is also true that we can <strong>integrate it in legacy pipelines</strong>, or where we have no clear pipeline whatsoever.</p> <p>How? Pretty easy – even if there is DSC in the name, we are still talking about <strong>PowerShell</strong>, hence who can stop us from invoking a legacy script or even a command?</p> <p>For example, think about where you have a script which stops IIS, copies the new content and then the scripts restarts IIS, using iisreset and xcopy. Not best practice at all, but it is broadly used. You can replace it with this:</p> <p><a href="http://lh4.ggpht.com/-dD4UT9sXkds/VN0kpquUMwI/AAAAAAAABys/m2G8uFxK1Tc/s1600-h/image%25255B4%25255D.png"><img title="image" style="border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px; display: inline" border="0" alt="image" src="http://lh4.ggpht.com/-e3vBGPyfkEA/VN0kqFtWcUI/AAAAAAAAByw/FUhLlnVL5QM/image_thumb%25255B2%25255D.png?imgmax=800" width="584" height="272"></a> </p> <p>The <strong>Invoke-Command</strong> cmdlet is a <strong>standard</strong> PowerShell one, it has nothing to do with DSC. But embedded into a DSC script it can make <strong>a functional step</strong> into the DSC script itself.</p> <p>Even better, do you have a preparation script which prepares the environment? You can use <strong>Invoke-Command</strong> with the <strong>–FilePath </strong>switch, pointing at your script, as part of the DSC script.</p>  

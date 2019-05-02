@@ -1,0 +1,13 @@
+---
+layout: post
+title: I updated SonarQube to 5.6 and nothing works any longer, should I panic?
+date: '2016-06-08T10:18:00.001+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2016-06-08T13:02:03.515+01:00'
+thumbnail: https://lh3.googleusercontent.com/-zCIbaquy33g/V1fiwyksTII/AAAAAAAADRc/NrpRJSYvi8s/s72-c/image_thumb%25255B2%25255D.png?imgmax=800
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-4553462144680189116
+blogger_orig_url: https://mattvsts.blogspot.com/2016/06/i-updated-sonarqube-to-56-and-nothing.html
+---
+
+<p>SonarQube 5.6 is the new LTS release, hence there are lots of changes.</p> <p>The first step where you might panic is when you launch it for the first time, you will find this:</p> <p><a href="https://lh3.googleusercontent.com/-vwTU9oUxqQM/V1fiwMIcTHI/AAAAAAAADRQ/NihtR5RHE0A/s1600-h/image%25255B4%25255D.png"><img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="image" src="https://lh3.googleusercontent.com/-zCIbaquy33g/V1fiwyksTII/AAAAAAAADRc/NrpRJSYvi8s/image_thumb%25255B2%25255D.png?imgmax=800" width="544" height="176"></a></p> <p>ce is the Compute Engine, a process for data aggregation on the server.</p> <p>Don’t worry, <strong>Process[ce] </strong>will eventually go up <strong>after </strong>you run http://&lt;your SonarQube&gt;/setup and migrate to 5.6.</p> <p>Then, this at build time:</p> <p><a href="https://lh3.googleusercontent.com/-tljRcR1ArLg/V1fixlN5sHI/AAAAAAAADRo/eljl8FvyK4U/s1600-h/image%25255B8%25255D.png"><img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="image" src="https://lh3.googleusercontent.com/-qNYzZ4iWZPE/V1fiyVdhuRI/AAAAAAAADR0/t1OZ1F0SlNQ/image_thumb%25255B4%25255D.png?imgmax=800" width="544" height="116"></a></p> <p>SonarQube comes with no plugins out-of-the-box! Remember to bring yours from the old installation and update them after the system check..</p>

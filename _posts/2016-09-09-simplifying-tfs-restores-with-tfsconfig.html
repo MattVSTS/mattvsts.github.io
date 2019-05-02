@@ -1,0 +1,12 @@
+---
+layout: post
+title: Simplifying TFS restores with TFSConfig OfflineDetach
+date: '2016-09-09T16:20:00.001+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2016-09-09T16:20:56.596+01:00'
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-305776813646554452
+blogger_orig_url: https://mattvsts.blogspot.com/2016/09/simplifying-tfs-restores-with-tfsconfig.html
+---
+
+<p>Before TFS 2015 Update 3, if you want to restore an instance you need to restore all the collection databases of the instance. This might be an extremely long and time-consuming activity.</p> <p>Very quietly, Microsoft introduced the <strong><a href="https://www.visualstudio.com/en-us/docs/setup-admin/command-line/tfsconfig-cmd">OfflineDetach</a> </strong>command for TFSConfig. What is that?</p> <p>It is a new command you can use to restore only a specific collection (and configuration database) so you can simplify the restore operation and save time.</p> <p>Aside from that, you can also use it to restore non-detached databases (useful for DR).</p>

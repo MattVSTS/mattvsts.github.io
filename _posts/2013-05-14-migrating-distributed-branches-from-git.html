@@ -1,0 +1,13 @@
+---
+layout: post
+title: Migrating distributed branches from Git to Team Foundation Server
+date: '2013-05-14T16:13:00.001+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2013-05-14T16:13:54.059+01:00'
+thumbnail: http://lh5.ggpht.com/-4w7p3eDWCo8/UZJUr6CHo1I/AAAAAAAAA6A/dzzPDdbmNDg/s72-c/image_thumb%25255B4%25255D.png?imgmax=800
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-3626350239328658517
+blogger_orig_url: https://mattvsts.blogspot.com/2013/05/migrating-distributed-branches-from-git.html
+---
+
+<p>If you have to migrate (like me, today) a <strong>huge </strong>Git repository to Team Foundation Server, it’s very likely that you are going to hit one of the most common walls while migrating a distributed VCS to a centralized one: understanding the branches’ lifecycle.</p> <p>Briefly, in a DVCS you won’t have the common branches you might find in a VCS like Team Foundation Server, because of the nature of the DVCS itself which tends to have a number of branches for making offline working easier and smoother. Of course you won’t be able to clone this structure inside the Team Foundation Version Control, but there is a way to mitigate it.</p> <p>I am using Git-Tf, the Microsoft’s tool for migrating Git to Team Foundation Server. After you configured your repository, you should perform a <strong>git-tf checkin –deep </strong>in order to replicate every single changeset instead of a big bulk one. But you’d get an error:</p> <p><a href="http://lh5.ggpht.com/-p5Ui4SXnGIA/UZJUqpy4pDI/AAAAAAAAA54/r9SEod6CwqY/s1600-h/image%25255B6%25255D.png"><img title="image" style="border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px; display: inline" border="0" alt="image" src="http://lh5.ggpht.com/-4w7p3eDWCo8/UZJUr6CHo1I/AAAAAAAAA6A/dzzPDdbmNDg/image_thumb%25255B4%25255D.png?imgmax=800" width="724" height="112"></a> </p> <p>Here is what I meant: if you have multiple parents for a commit, you cannot replicate it inside Team Foundation Server. If you rebase, you are going to edit the history, which is wrong from a preservation point of view.</p> <p>So you should use the –autosquash switch, which is going to create a linear history without editing it. How? By finding out the HEAD revisions.</p>  

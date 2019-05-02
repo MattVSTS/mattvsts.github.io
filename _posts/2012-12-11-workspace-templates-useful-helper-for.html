@@ -1,0 +1,12 @@
+---
+layout: post
+title: 'Workspace Templates: a useful helper for non-VS users'
+date: '2012-12-11T08:47:00.001Z'
+author: Matteo Emili
+tags: 
+modified_time: '2012-12-11T08:47:34.687Z'
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-61301803786005128
+blogger_orig_url: https://mattvsts.blogspot.com/2012/12/workspace-templates-useful-helper-for.html
+---
+
+<p>If you have a user which doesn’t use Visual Studio (reasons may vary: designers, stakeholders, analysts, etc.) but uses the Windows Explorer Integration brought you by the Team Foundation Server Power Tools, this user must go through the Team Explorer at least for setting the workspace.</p> <p>Letting them use the Team Explorer is a shocking experience, from a users’ point of view: they are not used to the complexity of Visual Studio, and this can lead to errors and problems.</p> <p>In order to fix that, we can use the tf workspace command-line tool, with the /template switch.</p> <p>It’s extremely easy:</p> <p align="left"><em>tf workspace /new /template:myworkspace;TFSAdmin /collection:http://server:8080/tfs/Collection</em></p> <p align="left">It takes a <em>myworkspace</em> linked to the user (in my case, <em>TFSAdmin</em>) and it creates for the current user a copy of it. So the project is already mapped, and the user can start using the Windows Explorer Integration alone.</p>  

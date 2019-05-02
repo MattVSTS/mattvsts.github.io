@@ -1,0 +1,13 @@
+---
+layout: post
+title: A quick look at the new SonarQube tasks for TFS and VSTS
+date: '2018-02-16T16:58:00.001Z'
+author: Matteo Emili
+tags: 
+modified_time: '2018-02-16T16:58:10.584Z'
+thumbnail: https://lh3.googleusercontent.com/-R_nGj80lirE/WocNkl5wiWI/AAAAAAAAEzY/OGeAUS1UsNAFljOOWu1-_Lbx54bhJoe7ACHMYCw/s72-c/image_thumb1?imgmax=800
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-7204593785176345835
+blogger_orig_url: https://mattvsts.blogspot.com/2018/02/a-quick-look-at-new-sonarqube-tasks-for.html
+---
+
+<p>Last week SonarSource released <a href="https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarqube">a new version</a> of their tasks for TFS and VSTS, with a couple of very welcome additions.</p><p>Up to v3, we basically had to do everything manually – especially passing parameters with the /d:… switch.</p><p>v4 introduces a context-aware switch where you can specify what you are using for your build:</p><p>&nbsp;<a href="https://lh3.googleusercontent.com/-o8UZsylThcs/WocNjsgZXzI/AAAAAAAAEzU/Ictl3Ueaxcs3e3ncMBTP_20gsUFV0LU5wCHMYCw/s1600-h/image3"><img width="504" height="54" title="image" style="display: inline; background-image: none;" alt="image" src="https://lh3.googleusercontent.com/-R_nGj80lirE/WocNkl5wiWI/AAAAAAAAEzY/OGeAUS1UsNAFljOOWu1-_Lbx54bhJoe7ACHMYCw/image_thumb1?imgmax=800" border="0"></a></p><p>The <strong>Use standalone scanner</strong> is quite interesting, as it guides you towards providing a .properties file:</p><p><a href="https://lh3.googleusercontent.com/-8H1xpcTHZ44/WocNlsy2mHI/AAAAAAAAEzc/WKUMJFur3HUZt-g6XKvJKPGlC8LP2nbgwCHMYCw/s1600-h/image7"><img width="504" height="144" title="image" style="display: inline; background-image: none;" alt="image" src="https://lh3.googleusercontent.com/-J3r4LCvP8gs/WocNmkrR_pI/AAAAAAAAEzg/Y6XrtyqFQBwkwFfBHyJum01-3HH5dOMdACHMYCw/image_thumb3?imgmax=800" border="0"></a></p><p>Also, gone are the days of using /d:… inline. There is a very handy <strong>Additional Properties</strong> textbox to use with a line-by-line parsing, which makes property override very easy to do:</p><p><a href="https://lh3.googleusercontent.com/-eHOwq4oqrow/WocNngBwbbI/AAAAAAAAEzk/Jneq4OYDxhkBcNBxi4AcPWpvk5iTGfoWgCHMYCw/s1600-h/image11"><img width="404" height="158" title="image" style="display: inline; background-image: none;" alt="image" src="https://lh3.googleusercontent.com/-Kt3ic-7paOo/WocNoYar_0I/AAAAAAAAEzo/Rmi4kOwhcQ4hlWFB_PXGr5VUth5mAp8nQCHMYCw/image_thumb5?imgmax=800" border="0"></a></p><p>Tasks are also split now into Prepare Analysis, Run Code Analysis and Publish Analysis Result, to allow a more streamlined design of your Build Definition.</p>

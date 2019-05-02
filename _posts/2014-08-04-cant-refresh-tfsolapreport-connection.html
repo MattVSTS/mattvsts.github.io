@@ -1,0 +1,14 @@
+---
+layout: post
+title: Can’t refresh the TfsOlapReport connection? Have a look at the Trusted Data
+  Providers…
+date: '2014-08-04T10:19:00.001+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2014-08-04T10:19:54.471+01:00'
+thumbnail: http://lh6.ggpht.com/-LGkaoqRyLkw/U99QNzer9VI/AAAAAAAABiw/W_5pHJ67I0o/s72-c/image_thumb.png?imgmax=800
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-6294577426649993892
+blogger_orig_url: https://mattvsts.blogspot.com/2014/08/cant-refresh-tfsolapreport-connection.html
+---
+
+<p>You open the SharePoint Dashboard and you suddenly see this error:</p> <p><a href="http://lh5.ggpht.com/-FH8XCLhIch0/U99QNAYV8fI/AAAAAAAABio/F2-hvxH5QMw/s1600-h/image2.png"><img title="image" style="border-left-width: 0px; border-right-width: 0px; border-bottom-width: 0px; display: inline; border-top-width: 0px" border="0" alt="image" src="http://lh6.ggpht.com/-LGkaoqRyLkw/U99QNzer9VI/AAAAAAAABiw/W_5pHJ67I0o/image_thumb.png?imgmax=800" width="244" height="176"></a> </p> <p><strong>An error occurred during an attempt to establish a connection to the external data source. The following connections failed to refresh. TfsOlapReport</strong>  <p>Fair enough, something happened to the Excel Services. Does it? Actually not – and if you try opening that specific report you will see your local Excel refreshing the data and working as usual.</p> <p>What happened?</p> <p>That specific error is a generic refresh error in our case. I tried back and forth on all the usual suspects – SSAS permissions, <a href="http://mattvsts.blogspot.co.uk/2014/05/the-tfs-excel-reports-wont-load-after.html">SSS token in the file</a>, SharePoint settings, even firewall ports – but nothing changed.</p> <p>Suddenly I noticed some reports were working (the Burndown one for example) while this (Active Bugs by Priority) didn’t. So what?</p> <p>Looking at the Connection String I saw the Burndown report had <strong>MSOLAP.3</strong> as a provider, while the broken report was using <strong>MSOLAP.5</strong>…</p> <p>A quick double check on the SharePoint server (Manage Excel Services Application –&gt; Trusted Data Providers) brought to the solution: <strong>MSOLAP.5 was not listed as a Trusted Data Provider</strong>.</p> <p>Once I added MSOLAP.5 to the list everything worked as expected again and the reports were correctly showing.</p>  

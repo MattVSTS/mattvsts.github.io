@@ -1,0 +1,12 @@
+---
+layout: post
+title: What are .tfignore files?
+date: '2015-02-11T14:06:00.001Z'
+author: Matteo Emili
+tags: 
+modified_time: '2015-02-11T14:06:23.643Z'
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-7678767715918966867
+blogger_orig_url: https://mattvsts.blogspot.com/2015/02/what-are-tfignore-files.html
+---
+
+<p>I was talking with <a href="http://twitter.com/alkampfer">Gian Maria</a> this morning about the need of excluding some files from the Version Control, with both TFVC and Git. With Git (and the .gitignore file) you can specify rules for it, but what about the TFVC?</p> <p>Typically you have two options, a check-in policy or a <strong>.tfignore</strong> file. What is the latter?</p> <p>It is a file which specifies some rules about the allowed and disallowed files in the Team Foundation Version Control. You need to create it in your Workspace folder, and you can specify rules like <a href="https://msdn.microsoft.com/library/vstudio/ms245454(v=vs.110).aspx#tfignore">these</a>. Yep, pretty much like the Git counterpart.</p> <p>Of course it isn’t like a check-in policy, but it provides a good way of enabling basic rules on the allowed files in your TFVC. It is very helpful anyway when you have large teams, it enables a quick distribution of a standard set of policies without too much mess around the startup.</p>  

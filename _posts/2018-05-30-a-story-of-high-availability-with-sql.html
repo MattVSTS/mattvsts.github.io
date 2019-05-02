@@ -1,0 +1,12 @@
+---
+layout: post
+title: A story of high availability with SQL Server AlwaysOn and TFS
+date: '2018-05-30T12:20:00.001+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2018-05-30T12:20:26.028+01:00'
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-6788194527859251908
+blogger_orig_url: https://mattvsts.blogspot.com/2018/05/a-story-of-high-availability-with-sql.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on">A few weeks ago something happened on our TFS instance - we discovered that DBCC CHECKDB under certain conditions can mark a database as corrupted.<br /><br />Long story short, this was due to a peculiar condition related to a high volume of transactions during that operation, not something you see every day. Microsoft Support was really good helping us getting back to normality.<br /><br />In retrospective, what really hit me was how resilient TFS was thanks to SQL Server AlwaysOn. As you know, I am a huge fan of AlwaysOn because of how transparent it makes High Availability.<br /><br />For us, maintaining availability meant a simple failover to the other node. Given that we are running the Availability Group with <b>Synchronous-Commit Mode</b>&nbsp;(my default choice when it comes to TFS) the then-Primary Replica was already updated to the latest transaction, so there was no data loss.<b>&nbsp;</b><br /><b><br /></b>Team Foundation Server did not lose a single heartbeat. When things go south like this, during the issue itself and if you are doing something during the failover you will get a <b>JobInitializationError</b>, which is self-explanative. As this is a transactional system by design, nothing is left hanging in the balance like good ol' SourceSafe :)<br /><br />Of course we were in limited availability while we were troubleshooting and fixing this problem (<b>always change the Failover Mode to Manual&nbsp;when you are doing so</b>), but there was no downtime.<br /><br />Also talking recovery, at the end of the day we had to restore backups on the Secondary Replica to get back to a proper synchronisation. Again, a bit tedious and time consuming given the sizes involved, but it was flawless.</div>

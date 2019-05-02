@@ -1,0 +1,13 @@
+---
+layout: post
+title: A cryptic story around Git, VSTS and Azure Active Directory
+date: '2016-01-06T13:33:00.001Z'
+author: Matteo Emili
+tags: 
+modified_time: '2016-01-06T13:33:16.107Z'
+thumbnail: https://lh3.googleusercontent.com/-BS4ps1sJ-jc/Vo0Xbw6IevI/AAAAAAAACrg/GnV6GWNuALs/s72-c/image_thumb.png?imgmax=800
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-4482747335239723159
+blogger_orig_url: https://mattvsts.blogspot.com/2016/01/a-cryptic-story-around-git-vsts-and.html
+---
+
+<p>This is a short and easy tip with an interesting background. <br><br>If you try to push stuff to a Git repository hosted in a VSTS account, where this account is backed by Azure Active Directory and you are not logged on with the relevant credentials, you are going to get a quite cryptic error:</p> <p><a href="https://lh3.googleusercontent.com/-z7aTpGzmCD8/Vo0XYA7AIrI/AAAAAAAACrU/F-MGinSEqe4/s1600-h/image2.png"><img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="image" src="https://lh3.googleusercontent.com/-BS4ps1sJ-jc/Vo0Xbw6IevI/AAAAAAAACrg/GnV6GWNuALs/image_thumb.png?imgmax=800" width="244" height="58"></a><br>The Output window is not quite helpful either:<br><br><a href="https://lh3.googleusercontent.com/-HK8_leqYqak/Vo0XffdmGyI/AAAAAAAACrs/Wi9GdCLriD8/s1600-h/image9.png"><img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="image" src="https://lh3.googleusercontent.com/-wVOhpr-779w/Vo0XjN5R5VI/AAAAAAAACr4/1tQRldxXVfA/image_thumb3.png?imgmax=800" width="244" height="39"></a>&nbsp;<br>What is going on here? The reason, as I stated, is simple – I wasn’t using the right credentials. But the problem is that Visual Studio is not warning me, while instead the command line would just ask for the credentials.<br>One of these things you need to <em>just know</em>, I assume <img class="wlEmoticon wlEmoticon-smile" style="border-top-style: none; border-left-style: none; border-bottom-style: none; border-right-style: none" alt="Smile" src="https://lh3.googleusercontent.com/-xQQ1ZfT3FOQ/Vo0XmikUaFI/AAAAAAAACsE/rRxipf2K_CQ/wlEmoticon-smile2.png?imgmax=800"></p>

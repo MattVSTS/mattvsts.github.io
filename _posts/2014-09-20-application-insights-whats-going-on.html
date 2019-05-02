@@ -1,0 +1,13 @@
+---
+layout: post
+title: 'Application Insights: what’s going on?'
+date: '2014-09-20T07:39:00.000+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2014-09-20T07:39:26.113+01:00'
+thumbnail: http://3.bp.blogspot.com/-ISqWakedubo/VBcEdwodFOI/AAAAAAAABkM/OggreFOBDtw/s72-c/ai0.PNG
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-1193429109031972216
+blogger_orig_url: https://mattvsts.blogspot.com/2014/09/application-insights-whats-going-on.html
+---
+
+I guess it has been a little overlooked, but there is<strong> a lot</strong> of moving around Application Insights…<br />The biggest thing is that with Visual Studio 2013 Update 3, Application Insights is moving towards version 2.0. It’s not a mere version change…<br /><div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-ISqWakedubo/VBcEdwodFOI/AAAAAAAABkM/OggreFOBDtw/s1600/ai0.PNG" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/-ISqWakedubo/VBcEdwodFOI/AAAAAAAABkM/OggreFOBDtw/s1600/ai0.PNG" height="323" width="640" /></a></div>Application Insights <strong>is being moved to Microsoft Azure</strong>, and 2.0 is the first version of it. The move is not complete yet, so the 1.3.2 version – running on Visual Studio Online – works, and it contains all the current feature set, but bear in mind that they are “<a href="http://azure.microsoft.com/en-us/documentation/articles/app-insights-get-started/"><em>rebuilding it from the ground up as part of Microsoft Azure</em></a>”.<br />If you want to understand which version you are running, just check the <strong>ApplicationInsights.config</strong> file: if it contains a <a href="http://msdn.microsoft.com/en-us/library/dn793604.aspx">schemaVersion</a>, then you are using the 2.0 release.<br />The Azure version lacks several features at the moment (Windows Store and Windows Phone apps monitoring, different APIs) and there are a couple of architectural changes, most notably the agent-free performance monitoring.<br />But <strong>it does not mean you are losing anything</strong>: it was in preview on VSO, it is in preview on Azure, and you can use both. If your application or service is configured to send data to the 1.3.2 version, this is not changing as there is no automatic upgrade.<br />There is only one thing to consider: if you remove the 2.0 package and you restore the 1.3.2 one, you cannot return to the 2.0 without <strong>repairing</strong> the Visual Studio installation.

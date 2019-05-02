@@ -1,0 +1,13 @@
+---
+layout: post
+title: What happened to the SonarQube extension?
+date: '2016-12-08T14:45:00.001Z'
+author: Matteo Emili
+tags: 
+modified_time: '2016-12-08T14:45:48.678Z'
+thumbnail: https://lh3.googleusercontent.com/-6S22QpwHUWc/WElyFKmjL5I/AAAAAAAAEK0/jp9BbQz4MRQ/s72-c/image_thumb2.png?imgmax=800
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-3924418233802379439
+blogger_orig_url: https://mattvsts.blogspot.com/2016/12/what-happened-to-sonarqube-extension.html
+---
+
+<p>If you run a SonarQube analysis in your pipeline you might have noticed this:</p> <p><a href="https://lh3.googleusercontent.com/-VxTmB1h4ckg/WElyECKpuBI/AAAAAAAAEKs/3aseiI2oRNs/s1600-h/image4.png"><img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="image" src="https://lh3.googleusercontent.com/-6S22QpwHUWc/WElyFKmjL5I/AAAAAAAAEK0/jp9BbQz4MRQ/image_thumb2.png?imgmax=800" width="504" height="50"></a>It is actually <a href="https://marketplace.visualstudio.com/items?itemName=ms-sonarsource.sonarqube">the case</a> – the SonarQube extension is being spun off the product and transferred to SonarSource for further development.</p> <p>This is not bad news, as we already gained the possibility of running the command-line scanner in the Team Build, both on-premise and (that is where it is important!) on the hosted one.</p> <p>Also, there is a new integration type – a native <strong>SonarQube </strong>one:</p> <p><a href="https://lh3.googleusercontent.com/-5ikkreFXahs/WElyGGj_IwI/AAAAAAAAEK8/qhctbsXPs4E/s1600-h/image7.png"><img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="image" src="https://lh3.googleusercontent.com/-0G3CH7II3sg/WElyG9-9F2I/AAAAAAAAELE/WAR3cwJaODA/image_thumb3.png?imgmax=800" width="244" height="140"></a></p> <p>Here you can define your server and use a <a href="http://docs.sonarqube.org/display/SONAR/User+Token">token</a> for authentication, which is much better than credentials.</p>

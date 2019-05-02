@@ -1,0 +1,13 @@
+---
+layout: post
+title: Track service usage data in VSTS
+date: '2016-10-20T11:50:00.001+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2016-10-20T11:50:14.767+01:00'
+thumbnail: https://lh3.googleusercontent.com/-smoIrdBJ9fA/WAihXXJ_fZI/AAAAAAAAD90/GOGH042keg8/s72-c/image_thumb%25255B3%25255D.png?imgmax=800
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-7839012190103678773
+blogger_orig_url: https://mattvsts.blogspot.com/2016/10/track-service-usage-data-in-vsts.html
+---
+
+<p>Every TFS admin knows about the <a href="http://mattvsts.blogspot.co.uk/2014/05/troubleshooting-users-issues-with-team.html">Operational Intelligence</a> page. It is a very important tool for managing Team Foundation Server, which provides lots of useful information about service usage.</p> <p>Nothing like that existed for VSTS, up until a few sprints ago. Now if you look at the Account level settings…</p> <p><a href="https://lh3.googleusercontent.com/-ADMCxYh2U8E/WAihWZoeJhI/AAAAAAAAD9s/SCLSIn5dFTU/s1600-h/image%25255B7%25255D.png"><img title="image" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="image" src="https://lh3.googleusercontent.com/-smoIrdBJ9fA/WAihXXJ_fZI/AAAAAAAAD90/GOGH042keg8/image_thumb%25255B3%25255D.png?imgmax=800" width="504" height="73"></a></p> <p>The Usage tab is a revamped version of Operational Intelligence for VSTS! Of course you won’t be interested in the server-side jobs as it is a service, but here you can get all the usage audit about a certain user:</p> <p><a href="https://lh3.googleusercontent.com/-JvMi5_wm82E/WAihYXkDLjI/AAAAAAAAD98/SW1PSUnZkKo/s1600-h/image%25255B6%25255D.png"><img title="image" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="image" src="https://lh3.googleusercontent.com/-QQzXb8y6nqs/WAihZeEds9I/AAAAAAAAD-E/nLSDIcdWgb4/image_thumb%25255B2%25255D.png?imgmax=800" width="504" height="183"></a></p> <p>It is worth noting that there are rate limits (the Usage column, expressed in Team Services Throughput Units), so you can be throttled or stopped if you are exceeding these – usually with an automated tool or a script. More about this <a href="https://www.visualstudio.com/docs/reference/rate-limits">here</a>.</p>

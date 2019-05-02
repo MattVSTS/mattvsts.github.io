@@ -1,0 +1,12 @@
+---
+layout: post
+title: 'Again on the logs: are errors in the logs going to stop an upgrade?'
+date: '2014-10-16T16:37:00.001+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2014-10-16T16:37:22.693+01:00'
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-7878442824333430377
+blogger_orig_url: https://mattvsts.blogspot.com/2014/10/again-on-logs-are-errors-in-logs-going.html
+---
+
+<p>A quick but interesting question came out this week: “<em>if I see an error in the Event Viewer of the Application Tier, is it going to break a TFS upgrade?”</em></p> <p>Generally speaking – no. The errors you see in the Event Viewer are client-side logs reported to the server. You might see an error on a client not able to connect, another one because of a non-existent user or value in the Work Item query, or more critically an error because you cannot contact your <strong>data tier</strong>.</p> <p>It is the <strong>data tier</strong> which contains <em>all the meat</em>. All the data is stored over there and, if you look at the Configuration logs after an upgrade, the big show is there. </p> <p>Of course there is a correlation between the data tier’s schema and the application tier version – everything is handled by the same binaries.</p>  

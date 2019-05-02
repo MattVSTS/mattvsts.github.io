@@ -1,0 +1,12 @@
+---
+layout: post
+title: Troubleshooting for dummies with Team Foundation Server
+date: '2013-05-27T21:23:00.001+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2013-05-27T21:23:10.784+01:00'
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-1415892972653626016
+blogger_orig_url: https://mattvsts.blogspot.com/2013/05/troubleshooting-for-dummies-with-team.html
+---
+
+<p>I have been asked how did I manage to understand the issue with the Work Item Synchronization Service I posted before, so maybe a broad answer could be better than a one-to-one.</p> <p>At the very beginning, I have been notified by a user which didn’t manage to see his Iterations in the proper way after some amendments. </p> <p>After asking to clean the client cache – an unsuccessful try - I tried <a href="http://msdn.microsoft.com/en-us/library/ff400237(v=vs.110).aspx">refreshing</a> the Data Warehouse, and eventually <a href="http://msdn.microsoft.com/en-us/library/cc668753(v=vs.110).aspx">rebuilding</a> it. No luck again.</p> <p>When this sort of issues happen, it can be nasty. My suggestion is to avoid running some scripts you may find on the web, as touching the TFS databases without the consent of a Microsoft CSS man would be <strong>very dangerous</strong> and can put your installation in <strong>an unsupported </strong>situation or even worse, it can be damaged.</p> <p>You can have a look in the Event Viewer for issues, it is time consuming but often useful.</p> <p>Or you can do as I did, logging into the <a href="http://blogs.msdn.com/b/granth/archive/2013/02/13/tfs2012-new-tools-for-tfs-administrators.aspx">Administrative Page</a> (the informally called <em><strong>_oi</strong>) </em>which contains a lot of informations about everything running on the Team Foundation Server, in a almost real time state.</p> <p>In this case, I noticed the user raised some service calls with –1 as a result, which means error. Opening the log I looked at the error detail, so I managed to get in touch with Microsoft. Luckily the RC of the Update 3 went live shortly after the issue, so applying it was a matter of a very short time.</p> <p>I <strong>strongly</strong> suggest looking at _oi very often, as it is not just a troubleshooting tool, but it is a real live look at the servers’ health, with detailed reports etc.</p>  

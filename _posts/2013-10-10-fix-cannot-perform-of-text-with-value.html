@@ -1,0 +1,13 @@
+---
+layout: post
+title: Fix the “Cannot perform 'SetProperty of Text with value “” on the hidden control.”
+  error
+date: '2013-10-10T16:51:00.001+01:00'
+author: Matteo Emili
+tags: 
+modified_time: '2013-10-10T16:51:56.549+01:00'
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-1444526808342811294
+blogger_orig_url: https://mattvsts.blogspot.com/2013/10/fix-cannot-perform-of-text-with-value.html
+---
+
+<p>If you are trying to use Test Manager to record a manual test with a web application and then play it back, you might find a nasty issue while inputting stuff: the error <strong>“Cannot perform 'SetProperty of Text with value "value"' on the hidden control.”.</strong></p> <p>It is caused by the Microsoft Security Update MS13-069 (KB2870699), which introduces several security fixes as well as this strange behaviour.</p> <p>To fix it and correctly playback the test, you would need to install the <a href="http://www.microsoft.com/en-us/download/details.aspx?id=40338">latest</a> Update of Visual Studio 2012 or use Visual Studio 2013 which is not affected. </p>  

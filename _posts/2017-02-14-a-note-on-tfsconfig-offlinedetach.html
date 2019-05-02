@@ -1,0 +1,12 @@
+---
+layout: post
+title: A note on TFSConfig OfflineDetach
+date: '2017-02-14T16:16:00.001Z'
+author: Matteo Emili
+tags: 
+modified_time: '2017-02-14T16:16:56.581Z'
+blogger_id: tag:blogger.com,1999:blog-9050180307874313601.post-5884670655510889967
+blogger_orig_url: https://mattvsts.blogspot.com/2017/02/a-note-on-tfsconfig-offlinedetach.html
+---
+
+<p> I already mentioned the very useful <a href="http://mattvsts.blogspot.com/2016/09/simplifying-tfs-restores-with-tfsconfig.html">TFSConfig OfflineDetach</a> in the past. Today I used it once again, and I realised a very important information is missing.</p> <p>What you need to remember is that the Configuration Database you need to use is the one which has the Collection you want to detach in it. And it must be offline as well.</p> <p>So in today’s situation (moving a collection across domains in a new instance) I had to restore the configuration database as well as the collection’s.</p>
