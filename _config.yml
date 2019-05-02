@@ -10,7 +10,7 @@ title:       Dapper DevOps
 email:       ''
 description: 'My take on DevOps and modern Software Engineering, done elegantly.'
 baseurl:     '' # The subpath of your site, e.g. /blog
-url:         'https://type-jekyll.aspirethemes.com/' # The base hostname & protocol for your site
+url:         'https://mattvsts.github.io/' # The base hostname & protocol for your site
 twitter:     'https://twitter.com/MattVSTS'
 github:      'https://github.com/MattVSTS'
 instagram:   ''
