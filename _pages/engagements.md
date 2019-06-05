@@ -4,7 +4,7 @@ title: Speaking engagements
 image: '/images/pages/engagements.jpg'
 ---
 
-# This is my speaking calendar 
+# This is my speaking calendar for 2018
 
 April
 ---
@@ -21,14 +21,9 @@ June
 
 July
 ---
-TBD    
+[Milton Keynes .NET Meetup](https://www.meetup.com/Milton-Keynes-NET-Meetup-Group/events/260338877/)
+
 TBD
-
-August
----
-
-September
----
 
 October
 ---
