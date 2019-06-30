@@ -23,6 +23,14 @@ July
 ---
 [Milton Keynes .NET Meetup](https://www.meetup.com/Milton-Keynes-NET-Meetup-Group/events/260338877/)
 
+[Reading .NET Meetup](https://www.meetup.com/en-AU/Reading-NET-Meetup/events/262673893/)
+
+August
+---
+TBD
+
+September
+---
 TBD
 
 October
