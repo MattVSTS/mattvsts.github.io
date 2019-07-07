@@ -27,12 +27,20 @@ July
 
 August
 ---
-TBD
+[UK Azure User Group](https://www.meetup.com/UKAzureUserGroup/events/262728374/)
 
 September
 ---
 TBD
 
 October
+---
+TBD
+
+November
+---
+TBD
+
+December
 ---
 TBD
