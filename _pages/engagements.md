@@ -22,7 +22,6 @@ June
 July
 ---
 [Milton Keynes .NET Meetup](https://www.meetup.com/Milton-Keynes-NET-Meetup-Group/events/260338877/)
-
 [Reading .NET Meetup](https://www.meetup.com/en-AU/Reading-NET-Meetup/events/262673893/)
 
 August
@@ -31,16 +30,17 @@ August
 
 September
 ---
-TBD
+Free
 
 October
 ---
-TBD
+TBC
 
 November
 ---
-TBD
+[DevOps Pro Moscow 2019](https://www.devopspro.ru/en/matteo-emili/)
+[DevOpsDays Warsaw 2019](https://devopsdays.pl/bio/#id=41310)
 
 December
 ---
-TBD
+Free
