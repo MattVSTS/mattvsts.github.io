@@ -18,20 +18,20 @@ In that case, you should think long and hard about it. How long will it take? Ar
 Stop you there for a second. Do you need to run a backup **every time**? That alone is an answer that shapes the pipeline design. 
 If not, then you need a Job that runs the backup **only under certain conditions**. Conditions **you** control.
 
-![](images/posts/2019-07-20-10-51-02.png)
+![](/images/posts/2019-07-20-10-51-02.png)
 
 So, the database backup should not run by default, but it needs to be controlled when releasing. Easy peasy - first of all, create a scoped variable for each stage where this applies:
 
-![](images/posts/2019-07-20-10-52-06.png)
+![](/images/posts/2019-07-20-10-52-06.png)
 
 This variable controls our Job. Then the job needs to be configured to look for the value and act accordingly. 
 
-![](images/posts/2019-07-20-10-54-19.png)
+![](/images/posts/2019-07-20-10-54-19.png)
 
 That's literally it. Set the variable when triggering the release, and you are set:
 
-![](images/posts/2019-07-20-10-55-12.png)
+![](/images/posts/2019-07-20-10-55-12.png)
 
-![](images/posts/2019-07-20-10-55-49.png)
+![](/images/posts/2019-07-20-10-55-49.png)
 
 Features are there, documentation is plentiful, use them! :-)
