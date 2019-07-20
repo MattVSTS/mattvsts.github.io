@@ -39,6 +39,7 @@ TBC
 November
 ---
 [DevOps Pro Moscow 2019](https://www.devopspro.ru/en/matteo-emili/)
+
 [DevOpsDays Warsaw 2019](https://devopsdays.pl/bio/#id=41310)
 
 December
