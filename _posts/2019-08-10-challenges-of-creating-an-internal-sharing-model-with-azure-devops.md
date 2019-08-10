@@ -24,10 +24,10 @@ You also cannot take the shortcut of leveraging the **Project Collection Valid U
 
 So, what are we left with? Aside from adding users directly (again, no!), if the organisation is setup in a smart way you will likely have your AAD synchronised with an on-premise Active Directory forest. That means your AD groups can be leveraged in Azure DevOps, and the users contained in there will inherit the access permissions.
 
-![Permissions](images/posts/2019-08-10-12-27-05.png)
+![Permissions](/images/posts/2019-08-10-12-27-05.png)
 
 With that in mind, you can build your Inner Source security model around AD groups (which should already control user access, as Active Directory - or any other directory service for this matter - should be the main way of handling access) mapped to Azure DevOps prather than directly into the Team Project, and then assign the group(s) to the Inner Source project. 
 
-![add](images/posts/2019-08-10-12-31-02.png)
+![add](/images/posts/2019-08-10-12-31-02.png)
 
 Of course it is not something you will do for every organisation. If you have small organisations you might accept managing the users. If you are using a single Team Project, you don't have this problem at all. As usual, the real world is the most varied of the demo scenarios, there is no one-size-fits-all solution.
