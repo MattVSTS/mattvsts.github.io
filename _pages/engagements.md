@@ -31,7 +31,7 @@ August
 
 September
 ---
-Free
+[WinOps London 2019](https://www.winops.org/london/agenda/computersaysno.php)
 
 October
 ---
