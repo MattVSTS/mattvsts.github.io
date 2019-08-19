@@ -5,9 +5,9 @@ tags: [azure, platform]
 ---
 If you used Azure DevOps long enough, you will eventually run into a situation like this - your Service Principal will expire and throw this error:
 
-![](images/posts/2019-08-19-20-55-34.png)
+![](/images/posts/2019-08-19-20-55-34.png)
 
-![](images/posts/2019-08-19-20-51-22.png)
+![](/images/posts/2019-08-19-20-51-22.png)
 
 Don't panic if you see this - when you authorise an Azure Resource Manager Service Connection Azure DevOps creates a new App Registration in Azure Active Directory (even if you are using as public tenant like hotmail - you will still get an AAD tenant to use):
 
