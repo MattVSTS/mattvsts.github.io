@@ -27,6 +27,7 @@ gems:
 
 include:
   - _pages
+  - _site/tag
 
 exclude:
   - vendor
