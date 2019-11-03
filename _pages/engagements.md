@@ -43,4 +43,4 @@ November
 
 December
 ---
-Free
+[London Microsoft DevOps Meetup](https://www.meetup.com/London-Microsoft-DevOps/events/266165437/)
