@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Speaking engagements
-image: '/images/pages/engagements.jpg'
+title: 2019 speaking engagements
+image: '/images/pages/engagements_2019.jpg'
 ---
 
 # This is my speaking calendar for 2019
