@@ -86,11 +86,7 @@ The YAML Pipeline facilities come to our rescue thanks to the _matrix_ option in
 
 This allows for simple, zero-touch permutations. An example is the one above: two OS, with two runtimes depending on the version:
 
-```# ASP.NET
-# Build and test ASP.NET projects.
-# Add steps that publish symbols, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4
-
+```
 trigger:
 - master
 
