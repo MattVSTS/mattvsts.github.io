@@ -10,3 +10,11 @@ January
 ---
 [AperiTech](https://community.codemotion.com/domusdotnet/meetups/meetup-aperitech-roma-di-gennaio-di-domusdotnet)  
 [DevOps@Work 2020](https://www.eventbrite.it/e/biglietti-devops-work-2020-81206162819)
+
+February
+---
+[GetLatestVersion On Air](https://www.eventbrite.it/e/biglietti-getlatestversion-on-air-febbraio-2020-91018122655?ref=estw)
+
+June
+---
+[DevOpsCon Berlin 2020](https://devopscon.io/business-company-culture/transforming-the-impossible-a-successful-lean-story/)
