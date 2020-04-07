@@ -15,9 +15,13 @@ February
 ---
 [GetLatestVersion On Air](https://www.eventbrite.it/e/biglietti-getlatestversion-on-air-febbraio-2020-91018122655?ref=estw)
 
+April
+---
+[Global Azure Virtual 2020 UK & Ireland](https://azureglobalbootcamp2020.azurewebsites.net/#modal-speaker-13)
+
 June
 ---
-[DevOpsCon Berlin 2020](https://devopscon.io/business-company-culture/transforming-the-impossible-a-successful-lean-story/)1
+[DevOpsCon Berlin 2020](https://devopscon.io/business-company-culture/transforming-the-impossible-a-successful-lean-story/)
 
 August
 ---
