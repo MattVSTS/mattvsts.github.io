@@ -17,6 +17,7 @@ February
 
 April
 ---
+[DevOpsCon Online Edition](https://devopscon.io/london/devopscon-online-edition-london/?go=ok)
 [Global Azure Virtual 2020 UK & Ireland](https://azureglobalbootcamp2020.azurewebsites.net/#modal-speaker-13)
 
 June
