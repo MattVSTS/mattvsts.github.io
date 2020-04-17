@@ -17,11 +17,16 @@ February
 
 April
 ---
-[DevOpsCon Online Edition](https://devopscon.io/london/devopscon-online-edition-london/?go=ok)
+[DevOpsCon Online Edition](https://devopscon.io/london/devopscon-online-edition-london/?go=ok)  
 [Global Azure Virtual 2020 UK & Ireland](https://azureglobalbootcamp2020.azurewebsites.net/#modal-speaker-13)
+
+May
+---
+TBD (Online, MEA)
 
 June
 ---
+TBD (Online, UK)  
 [DevOpsCon Berlin 2020](https://devopscon.io/business-company-culture/transforming-the-impossible-a-successful-lean-story/)
 
 August
