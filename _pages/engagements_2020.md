@@ -22,11 +22,11 @@ April
 
 May
 ---
-TBD (Online, MEA)
+[mshowto.org](https://www.mshowto.org/github-azure-devops-cok-karisik-belki-de-degil-webcastine-davetlisiniz.html)
 
 June
 ---
-TBD (Online, UK)  
+[DotNetSheff](https://www.meetup.com/dotnetsheff/events/270218933)
 [DevOpsCon Berlin 2020](https://devopscon.io/business-company-culture/transforming-the-impossible-a-successful-lean-story/)
 
 August
