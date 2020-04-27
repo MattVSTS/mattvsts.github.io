@@ -27,8 +27,11 @@ May
 June
 ---
 [DotNetSheff](https://www.meetup.com/dotnetsheff/events/270218933)  
-[DevOpsCon Berlin 2020](https://devopscon.io/business-company-culture/transforming-the-impossible-a-successful-lean-story/)
 
 August
 ---
 [DevOpsCon London 2020](https://devopscon.io/business-company-culture/transforming-the-impossible-a-successful-lean-story/)
+
+October
+---
+[DevOpsCon Berlin 2020](https://devopscon.io/business-company-culture/transforming-the-impossible-a-successful-lean-story/)
