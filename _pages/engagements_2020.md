@@ -30,9 +30,12 @@ June
 
 August
 ---
-[DevOpsCon London 2020](https://devopscon.io/business-company-culture/transforming-the-impossible-a-successful-lean-story/)
+TBC  
+
+September
+---
+TBC  
 
 October
 ---
-TBC - UK  
 [DevOpsCon Berlin 2020](https://devopscon.io/business-company-culture/transforming-the-impossible-a-successful-lean-story/)
