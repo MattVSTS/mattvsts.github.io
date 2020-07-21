@@ -30,7 +30,7 @@ June
 
 August
 ---
-TBC  
+[Leeds Azure Meetup](https://www.meetup.com/LeedsAzure/events/271747008/)
 
 September
 ---
