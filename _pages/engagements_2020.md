@@ -31,12 +31,13 @@ June
 August
 ---
 [Leeds Azure Meetup](https://www.meetup.com/LeedsAzure/events/271747008/)  
-[DevOpsCon London 2020](https://devopscon.io/business-company-culture/transforming-the-impossible-a-successful-lean-story/)
-
-September
----
-TBC  
+[DevOpsCon London 2020](https://devopscon.io/business-company-culture/transforming-the-impossible-a-successful-lean-story/)  
 
 October
 ---
-[DevOpsCon Berlin 2020](https://devopscon.io/business-company-culture/transforming-the-impossible-a-successful-lean-story/)
+[DevOpsCon Berlin 2020](https://devopscon.io/business-company-culture/transforming-the-impossible-a-successful-lean-story/)  
+[Cork .NET and Azure Meetup](https://www.meetup.com/CorkDotNetAzure/events/273027035/)  
+
+November
+---
+TBC

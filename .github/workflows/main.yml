@@ -25,7 +25,7 @@ jobs:
       uses: ethomson/send-tweet-action@v1.0.0
       with:
         # The status ("tweet") to post to twitter.
-        status: "Blogged! ${{ github.event.head_commit.message }} - https://mattvsts.github.io #mvpbuzz @AzureDevOps @GitHub"
+        status: "Blogged! ${{ github.event.head_commit.message }} - https://mattvsts.github.io #mvpbuzz #AzureDevOps @AzureDevOps @GitHub"
         # Consumer API key, available in the "Keys and tokens" section of your application in the Twitter Developer site.
         consumer-key: ${{ secrets.TWITTER_CONSUMER_API_KEY }}
         consumer-secret: ${{ secrets.TWITTER_CONSUMER_API_SECRET }}
