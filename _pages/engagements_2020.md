@@ -40,4 +40,9 @@ October
 
 November
 ---
+[DevOpsDerek](https://www.youtube.com/DevOpsDerek)  
+TBC  
+
+December
+---
 TBC
