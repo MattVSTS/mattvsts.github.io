@@ -41,9 +41,8 @@ October
 November
 ---
 [DevOpsDerek](https://www.youtube.com/DevOpsDerek)  
-TBC  
+[NE Bytes](https://ti.to/ne-bytes)
 
 December
 ---
 [UK Cloud Infrastructure User Group](https://www.meetup.com/UK-Cloud-Infrastructure-User-Group/events/273721742/)  
-TBC
