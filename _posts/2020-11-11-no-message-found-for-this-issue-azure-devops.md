@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "No message found for this issue" in Azure DevOps
+title: No message found for this issue in Azure DevOps
 tags: [pipelines]
 ---
 I am writing this post because I've been asked four times within two weeks, so it acts as a public service announcement :-)
