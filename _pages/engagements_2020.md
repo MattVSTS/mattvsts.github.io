@@ -47,3 +47,4 @@ December
 ---
 [mshowto.org](https://www.twitch.tv/mshowto)  
 [UK Cloud Infrastructure User Group](https://www.meetup.com/UK-Cloud-Infrastructure-User-Group/events/273721742/)  
+[DDD 2020](https://www.developerdeveloperdeveloper.com/schedule)
