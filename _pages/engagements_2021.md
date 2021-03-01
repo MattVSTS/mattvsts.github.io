@@ -19,6 +19,10 @@ April
 [DevOpsCon London 2021](https://devopscon.io/business-company-culture/devops-during-covid-19-what-did-we-learn/)  
 [Developer Summit 2021](https://wurreka.com/ict/virtual-conference/gids-2021/speaker/matteo-emili)  
 
+May
+---
+[IT Security Summit 2021](https://it-security-summit.de/conference-day/how-to-make-security-pervasive-without-falling-into-the-devsecops-trap/)  
+
 July
 ---
 [Developer Week 2021](https://www.developer-week.de/en/program-2020/#/tag-4)  
