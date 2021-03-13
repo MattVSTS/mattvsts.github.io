@@ -12,7 +12,7 @@ January
 
 March
 ---
-TBD
+[DotNetNotts](https://www.meetup.com/dotnetnotts/events/276911331)  
 
 April
 ---
@@ -26,3 +26,7 @@ May
 July
 ---
 [Developer Week 2021](https://www.developer-week.de/en/program-2020/#/tag-4)  
+
+August
+---
+TBD
