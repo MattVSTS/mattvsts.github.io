@@ -23,6 +23,10 @@ May
 ---
 [IT Security Summit 2021](https://it-security-summit.de/conference-day/how-to-make-security-pervasive-without-falling-into-the-devsecops-trap/)  
 
+June
+---
+[DevOpsCon Berlin 2021](https://devopscon.io/business-company-culture/devops-during-covid-19-what-did-we-learn/)  
+
 July
 ---
 [Developer Week 2021](https://www.developer-week.de/en/program-2020/#/tag-4)  
