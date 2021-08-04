@@ -27,10 +27,11 @@ July
 ---
 [Developer Week 2021](https://www.developer-week.de/en/program-2020/#/tag-4)  
 
-August
----
-[Microservices, containers and serverless Day North America 2021](https://1point21gws.com/microservices/online-northamerica/#Matteo)  
-
 September
 ---
 [IT Security Summit 2021](https://it-security-summit.de/conference-day/how-to-make-security-pervasive-without-falling-into-the-devsecops-trap/)  
+[Microservices, containers and serverless Day North America 2021](https://1point21gws.com/microservices/online-northamerica/#Matteo)  
+
+December
+---
+[DevOpsCon Munich 2021](https://devopscon.io/security/how-to-make-security-pervasive-without-falling-into-the-devsecops-trap/)
