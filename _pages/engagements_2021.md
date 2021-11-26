@@ -31,6 +31,7 @@ September
 ---
 [IT Security Summit 2021](https://it-security-summit.de/conference-day/how-to-make-security-pervasive-without-falling-into-the-devsecops-trap/)  
 
-December
+November
 ---
+[DDD 2021](https://www.developerdeveloperdeveloper.com/schedule)  
 [DevOpsCon Munich 2021](https://devopscon.io/security/how-to-make-security-pervasive-without-falling-into-the-devsecops-trap/)
