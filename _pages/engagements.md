@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 2022 speaking engagements
+title: Speaking engagements
 image: '/images/pages/engagements_2020.jpg'
 ---
 
