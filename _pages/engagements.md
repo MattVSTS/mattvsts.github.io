@@ -14,6 +14,7 @@ April
 
 May
 ---
+TBC  
 [Global DevOps Bootcamp 2022](https://globaldevopsbootcamp.com/)  
 
 June
