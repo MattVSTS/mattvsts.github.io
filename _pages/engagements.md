@@ -14,7 +14,7 @@ April
 
 May
 ---
-TBC  
+[IT Security Summit 2022](https://it-security-summit.de/it-security-summit/its-not-my-code-secure-software-supply-chain-in-practice/)  
 [Global DevOps Bootcamp 2022](https://globaldevopsbootcamp.com/)  
 
 June
