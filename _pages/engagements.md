@@ -15,8 +15,11 @@ April
 May
 ---
 [IT Security Summit 2022](https://it-security-summit.de/it-security-summit/its-not-my-code-secure-software-supply-chain-in-practice/)  
-[Global DevOps Bootcamp 2022](https://globaldevopsbootcamp.com/)  
 
 June
 ---
 [DevTalks.ro 2022](https://myconnector.ro/virtual/devtalks-2022/955/agenda/12718)
+
+July
+---
+[Developer Week 2022](https://www.developer-week.de/history/programm-2022/#/tag-4)
