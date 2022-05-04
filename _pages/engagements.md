@@ -15,6 +15,7 @@ April
 May
 ---
 [IT Security Summit 2022](https://it-security-summit.de/it-security-summit/its-not-my-code-secure-software-supply-chain-in-practice/)  
+[Azure Nigeria Community Conference](https://www.meetup.com/nigeria-microsoft-azure-meetup-group/events/284956990/)  
 
 June
 ---
