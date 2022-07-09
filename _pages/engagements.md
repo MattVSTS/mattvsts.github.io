@@ -24,3 +24,11 @@ June
 July
 ---
 [Developer Week 2022](https://www.developer-week.de/history/programm-2022/#/tag-4)
+
+October
+---
+TBC
+
+December
+---
+[DevOpsCon Munich 2022](https://devopscon.io/business-company-culture/what-did-it-mean-to-bring-inner-source-to-an-enterprise/)
