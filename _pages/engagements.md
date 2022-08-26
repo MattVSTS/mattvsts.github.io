@@ -27,6 +27,11 @@ July
 
 October
 ---
+[Jax London 2022](https://jaxlondon.com/devops-continuous-delivery/why-pipelines-as-code-is-the-way-forward/)  
+TBC
+
+November
+---
 TBC
 
 December
