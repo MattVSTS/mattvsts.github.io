@@ -28,11 +28,12 @@ July
 October
 ---
 [Jax London 2022](https://jaxlondon.com/devops-continuous-delivery/why-pipelines-as-code-is-the-way-forward/)  
-TBC
+[DevOps Heroes 2022](https://devopsheroes-2022.sessionize.com/session/355959)
 
 November
 ---
-TBC
+[DevOpsCon Singapore 2022](https://devopscon.io/continuous-delivery-automation/why-pipelines-as-code-is-the-way-forward/)  
+TBC  
 
 December
 ---
