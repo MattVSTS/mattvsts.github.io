@@ -33,7 +33,7 @@ October
 November
 ---
 [DevOpsCon Singapore 2022](https://devopscon.io/continuous-delivery-automation/why-pipelines-as-code-is-the-way-forward/)  
-TBC  
+[Kariera CodeWeek 2022](https://resources.kariera.gr/events/karieracodeweek/#-6-12)
 
 December
 ---
