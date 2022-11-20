@@ -37,4 +37,5 @@ November
 
 December
 ---
+[DDD North 2022](https://www.dddnorth.co.uk/schedule)  
 [DevOpsCon Munich 2022](https://devopscon.io/business-company-culture/what-did-it-mean-to-bring-inner-source-to-an-enterprise/)
