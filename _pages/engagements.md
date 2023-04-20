@@ -17,3 +17,11 @@ January
 April
 ---
 [DevOpsCon London 2023](https://devopscon.io/business-company-culture/inner-source-enterprise/)  
+
+May
+---
+[Limerick DotNet and Azure User Group](TBC)  
+
+June
+---
+[Azure Cloud Native](TBC)
