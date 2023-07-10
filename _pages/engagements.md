@@ -20,8 +20,12 @@ April
 
 May
 ---
-[Limerick DotNet and Azure User Group](TBC)  
+[Limerick DotNet and Azure User Group](https://www.meetup.com/limerick-dotnet/events/293450915/)  
 
 June
 ---
-[Azure Cloud Native](TBC)
+[Azure Cloud Native](https://www.meetup.com/azure-cloud-native/events/293451183/)  
+
+December
+---
+[DevOpsCon Munich 2023](https://devopscon.io/munich/program-munich/)

@@ -29,6 +29,8 @@ GEM
       rouge (~> 3.0)
       safe_yaml (~> 1.0)
       terminal-table (~> 2.0)
+    jekyll-feed (0.17.0)
+      jekyll (>= 3.7, < 5.0)
     jekyll-import (0.19.2)
       jekyll (>= 3.7, < 5.0)
       nokogiri (~> 1.0)
@@ -78,6 +80,7 @@ PLATFORMS
 DEPENDENCIES
   bundler
   jekyll
+  jekyll-feed
   jekyll-import
   jekyll-paginate
   jekyll-tagging

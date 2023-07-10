@@ -45,3 +45,9 @@ defaults:
       path: '_pages'
     values:
       permalink: /:basename:output_ext
+
+plugins:
+  - jekyll-feed
+title: Dapper DevOps
+description: Matteo's blog
+author: Matteo Emili
