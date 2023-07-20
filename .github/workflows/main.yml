@@ -1,10 +1,11 @@
 name: Social Media post
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
+# Controls when the action will run. Triggers the workflow on successful publishing of the pages.
 on:
-  push:
-    branches: [ master ]
+  workflow_run:
+    workflows: [pages-build-deployment]
+    types:
+      - completed
   workflow_dispatch: # Run workflow manually if needed
 
 
