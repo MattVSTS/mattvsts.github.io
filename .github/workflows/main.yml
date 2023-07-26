@@ -27,4 +27,4 @@ jobs:
       with:
         feed_list: 'https://mattvsts.github.io/feed.xml'
         ln_access_token: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
-        embed_image: # Url of embed image
+        embed_image: 'https://mattvsts.github.io/images/cover/iac.png'
