@@ -26,6 +26,14 @@ June
 ---
 [Azure Cloud Native](https://www.meetup.com/azure-cloud-native/events/293451183/)  
 
+October
+---
+TBC
+
+November
+---
+[Azure Community Enthusiasts](https://www.meetup.com/azure-community-enthusiasts/events/295219244/)
+
 December
 ---
 [DevOpsCon Munich 2023](https://devopscon.io/munich/program-munich/)
