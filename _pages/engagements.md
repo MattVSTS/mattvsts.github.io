@@ -28,7 +28,7 @@ June
 
 October
 ---
-TBC
+[DevOps Heroes 2023](https://www.devops-heroes.net/)
 
 November
 ---
