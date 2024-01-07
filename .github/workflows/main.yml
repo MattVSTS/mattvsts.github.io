@@ -7,9 +7,9 @@ on:
       - completed
   workflow_dispatch: # Run workflow manually if needed
 
-jobs:
-  build:
-    if: "!contains(github.event.head_commit.message, 'NO CI')"
+jobs: # Add the missing "jobs" property
+  post:
+    if: ${{ github.event_name == 'push' || github.event_name == 'pull_request' && !contains(github.event.head_commit.message, 'NO CI') }}
     runs-on: ubuntu-latest
 
     steps:
