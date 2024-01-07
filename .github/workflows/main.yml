@@ -9,7 +9,7 @@ on:
 
 jobs: # Add the missing "jobs" property
   post:
-    if: ${{ github.event_name == 'push' || github.event_name == 'pull_request' && !contains(github.event.head_commit.message, 'NO CI') }}
+    if: ${{ !contains(github.event.head_commit.message, 'NO CI') }}
     runs-on: ubuntu-latest
 
     steps:
