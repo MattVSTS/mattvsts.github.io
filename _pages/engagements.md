@@ -10,9 +10,13 @@ You can find my speaker profile [here](https://sessionize.com/matteoemili) with 
 
 These are my currently confirmed engagements for 2024!
 
+February
+---
+[DotNet Notts](https://www.meetup.com/dotnetnotts/events/299317303/)  
+
 March
 ---
-[DDD North 2024](https://dddnorth.co.uk/schedule)
+[DDD North 2024](https://dddnorth.co.uk/schedule)  
 
 April
 ---
