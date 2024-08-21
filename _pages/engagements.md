@@ -26,10 +26,6 @@ May
 ---
 [DevOps Conf 2024](https://devopsconf.dotnetdev.it/agenda)  
 
-June
+November
 ---
 TBC  
-
-October
----
-TBC
