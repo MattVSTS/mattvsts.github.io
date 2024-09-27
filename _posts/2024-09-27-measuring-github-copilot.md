@@ -4,8 +4,8 @@ title: Measuring the impact of your GitHub Copilot rollout
 tags: [github]
 ---
 GitHub Copilot is amazing... but you can't just roll it out all of a sudden with no planin a large engineering organisation!
-ß
-Flipping the switch on without a proper configuration would be plain dangerous (think about he risk of accepting licensed code without training on triaging), but once tßhis is addressed the most common thing I am asked about is:
+
+Flipping the switch on without a proper configuration would be plain dangerous (think about he risk of accepting licensed code without training on triaging), but once this is addressed the most common thing I am asked about is:
 
 > how do I measure the productivity impact of GitHub Copilot?
 
