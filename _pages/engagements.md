@@ -28,5 +28,5 @@ May
 
 November
 ---
-TBC  
+[GoTech World 2025](https://www.gotech.world/speakers-devops-stage2024)
 TBC 
