@@ -28,5 +28,5 @@ May
 
 November
 ---
-[GoTech World 2025](https://www.gotech.world/speakers-devops-stage2024)
-TBC 
+[GoTech World 2025](https://www.gotech.world/speakers-devops-stage2024)  
+[Surrey Azure User Group](https://www.meetup.com/surrey-azure-user-group/events/304266477/)
