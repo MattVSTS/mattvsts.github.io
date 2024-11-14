@@ -3,7 +3,7 @@ layout: post
 title: Developers in the age of AI
 tags: [thoughts]
 ---
-I just got back from Bucharest, where one of my sessions at [GoTech.World](http://gotech.world/speakers-ai-stage2024) was about what I believe is going to happen to developers in the age of AI.
+I just got back from Bucharest, where one of my sessions at [GoTech.World](https://www.gotech.world/build-ai-stage-agenda2024) was about what I believe is going to happen to developers in the age of AI.
 
 ### Excitement
 Excitement is really up there. I've been discussing AI at large with so many organisation for the past year, and there isn't a single one of them that's not excited about what AI can do for developers. They are at the frontline of this new technology, and the results for who embraces it properly are really out there to see. 
