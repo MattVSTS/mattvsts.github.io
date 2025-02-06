@@ -13,7 +13,10 @@ These are my currently confirmed engagements for 2025!
 February
 ---
 [DevOps Society](https://www.meetup.com/devops-society/events/305606581/)  
-[DotNet Notts](https://www.meetup.com/dotnetnotts/events/)    
+
+April
+---
+[DotNet Notts](https://www.meetup.com/dotnetnotts/events/)  
 
 May
 ---
