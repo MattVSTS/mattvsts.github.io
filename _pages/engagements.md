@@ -14,10 +14,8 @@ February
 ---
 [DevOps Society](https://www.meetup.com/devops-society/events/305606581/)  
 
-April
----
-[DotNet Notts](https://www.meetup.com/dotnetnotts/events/)  
-
 May
 ---
-TBC  
+[Global Azure 2025](https://www.meetup.com/microsoft-azure-community/events/303034158/)  
+[DotNet Notts](https://www.meetup.com/dotnetnotts/events/)  
+
