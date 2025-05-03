@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Infusing AI in Azure DevOps
+title: Infusing GenAI in Azure DevOps
 tags: [platform, ai]
 ---
 I lost count of how many people come to me asking for AI features in Azure DevOps, and then seeing being surprised when I tell them that it's _actually_ possible to have an AI-enhanced experience with the platform. So this post brings a couple of examples to the table to try and settle the argument once and for all 😀
