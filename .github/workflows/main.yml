@@ -36,7 +36,8 @@ jobs:
     - uses: nearform-actions/github-action-notify-twitter@master
       if: "!contains(env.GIT_COMMIT_MESSAGE, 'NO CI')"
       with:
-        message: Blogged! ${{ env.GIT_COMMIT_MESSAGE }} - https://mattvsts.github.io
+        message: |
+          Blogged! ${{ env.GIT_COMMIT_MESSAGE }} - https://mattvsts.github.io #MVPBuzz #AzureDevOps #GitHub
         twitter-app-key: ${{ secrets.TWITTER_CONSUMER_API_KEY }}
         twitter-app-secret: ${{ secrets.TWITTER_CONSUMER_API_SECRET }}
         twitter-access-token: ${{ secrets.TWITTER_ACCESS_TOKEN }}
