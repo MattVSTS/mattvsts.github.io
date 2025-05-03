@@ -28,6 +28,8 @@ jobs:
   twitter:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v2
+    
     - name: Expose git commit data
       uses: jcputney/git-commit-data-action@v2
 
