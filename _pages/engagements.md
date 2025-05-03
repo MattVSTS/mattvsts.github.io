@@ -17,5 +17,11 @@ February
 May
 ---
 [Global Azure 2025](https://www.meetup.com/microsoft-azure-community/events/303034158/)  
+
+June
+---
 [DotNet Notts](https://www.meetup.com/dotnetnotts/events/)  
 
+August
+---
+TBC

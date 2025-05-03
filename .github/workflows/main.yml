@@ -7,28 +7,34 @@ on:
       - completed
   workflow_dispatch: # Run workflow manually if needed
 
-jobs: # Add the missing "jobs" property
+jobs:
   linkedin:
-    if: ${{ !contains(github.event.head_commit.message, 'NO CI') }}
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
-
+    
+    - name: Expose git commit data
+      uses: jcputney/git-commit-data-action@v2
+    
     - name: Get Latest Post / Post On Linkedin
       uses: Arisamiga/Linkedin-RSS@master
+      if: "!contains(env.GIT_COMMIT_MESSAGE, 'NO CI')"
       with:
         feed_list: 'https://mattvsts.github.io/feed.xml'
         ln_access_token: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
         embed_image: 'https://mattvsts.github.io/images/cover/iac.png'
 
   twitter:
-    if: ${{ !contains(github.event.head_commit.message, 'NO CI') }}
     runs-on: ubuntu-latest
-    steps: 
+    steps:
+    - name: Expose git commit data
+      uses: jcputney/git-commit-data-action@v2
+
     - uses: nearform-actions/github-action-notify-twitter@master
+      if: "!contains(env.GIT_COMMIT_MESSAGE, 'NO CI')"
       with:
-        message: Blogged! ${{ github.event.head_commit.message }} - https://mattvsts.github.io
+        message: Blogged! ${{ env.GIT_COMMIT_MESSAGE }} - https://mattvsts.github.io
         twitter-app-key: ${{ secrets.TWITTER_CONSUMER_API_KEY }}
         twitter-app-secret: ${{ secrets.TWITTER_CONSUMER_API_SECRET }}
         twitter-access-token: ${{ secrets.TWITTER_ACCESS_TOKEN }}
