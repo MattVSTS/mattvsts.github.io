@@ -26,10 +26,10 @@ July
 ---
 [London DevOps, Data Science & GenAI meetup with Microsoft](https://developer.microsoft.com/en-us/reactor/events/26079/)
 
-August
----
-TBC
-
 September
 ---
-TBC
+[APIDays London 2025](https://www.apidays.global/events/london#agenda)
+
+November
+---
+TBA
