@@ -32,4 +32,4 @@ September
 
 November
 ---
-TBA
+[Global Agentic Nights London](https://globalai.community/chapters/london/)
