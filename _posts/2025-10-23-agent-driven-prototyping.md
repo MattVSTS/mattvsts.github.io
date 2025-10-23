@@ -49,9 +49,9 @@ You should be doing what any developer in working in a real Agentic Engineering 
 
 ![](/images/posts/2025-10-23-21-18-47.png)
 
-Now we are talking! A quick `npm run build` confirms it works on my machine. Or it loads, rather.
+Now we are talking! A quick `npm run build` confirms it works on my machine. Or it loads, rather.  
 
-## Getting on Azure
+## Getting on Azure
 Infrastructure-wise, we will go for the bare minimum: an Azure Storage Account with Table Storage for _my_ key-value storage, and an Azure Static Web App for the frontend. Simple enough.
 
 The first thing to do once you go down this route is to modify the default GitHub Actions workflow that Azure creates when you link the repo to the Web App:
