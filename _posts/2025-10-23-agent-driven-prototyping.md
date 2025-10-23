@@ -83,9 +83,9 @@ Interestingly enough, the final output was a list of potential troubleshooting s
 
 CORS looked like the culprit here. Once configured in the Storage Account, the application magically worked both locally and on Azure.
 
-![](/images/posts/2025-10-23-21-42-50.png)
+![](/images/posts/2025-10-23-22-44-41.png)
 
-![](/images/posts/2025-10-23-21-43-17.png)
+![](/images/posts/2025-10-23-22-46-05.png)
 
 ## How long did it take?
 As insane as it sounds, two hours. It was more the effort of getting the Spark right than anything else.
