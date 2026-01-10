@@ -17,7 +17,7 @@ TBC
 March
 ---
 [Azure AI Connect 2026](https://ai-athens.gr/)  
-TBC
+[DevOps Not Dead 2026 Q1](https://devopsnotdead.com/2026-london-q1/)
 
 May
 ---
