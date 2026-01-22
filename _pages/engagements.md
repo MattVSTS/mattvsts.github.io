@@ -12,7 +12,7 @@ These are my currently confirmed engagements for 2026!
 
 February
 ---
-TBC
+[DDD North 2026](https://www.dddnorth.co.uk/sessions)
 
 March
 ---
@@ -25,4 +25,5 @@ May
 
 June
 ---
+[DevOpsCon Berlin 2026](https://devopscon.io/berlin/)
 [VibeKode Munich 2026](https://vibekode.it)  
