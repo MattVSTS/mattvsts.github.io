@@ -12,18 +12,18 @@ These are my currently confirmed engagements for 2026!
 
 February
 ---
-[DDD North 2026](https://www.dddnorth.co.uk/sessions)
+[DDD North 2026](https://www.dddnorth.co.uk/sessions) - Hull, UK
 
 March
 ---
-[Azure AI Connect 2026](https://ai-athens.gr/)  
-[DevOps Not Dead 2026 Q1](https://devopsnotdead.com/2026-london-q1/)
+[Azure AI Connect 2026](https://ai-athens.gr/) - Online  
+[DevOps Not Dead 2026 Q1](https://devopsnotdead.com/2026-london-q1/) - London, UK
 
 May
 ---
-[DevOpsCon London 2026](https://devopscon.io/london/)
+[DevOpsCon London 2026](https://devopscon.io/london/) - London, UK
 
 June
 ---
-[DevOpsCon Berlin 2026](https://devopscon.io/berlin/)
-[VibeKode Munich 2026](https://vibekode.it)  
+[DevOpsCon Berlin 2026](https://devopscon.io/berlin/) - Berlin, Germany  
+[VibeKode Munich 2026](https://vibekode.it) - Munich, Germany  
