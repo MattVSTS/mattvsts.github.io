@@ -12,6 +12,7 @@ These are my currently confirmed engagements for 2026!
 
 February
 ---
+TBC
 [DDD North 2026](https://www.dddnorth.co.uk/sessions) - Hull, UK
 
 March
