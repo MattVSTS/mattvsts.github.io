@@ -12,7 +12,7 @@ These are my currently confirmed engagements for 2026!
 
 February
 ---
-TBC
+[DevOps Society](https://www.meetup.com/devops-society/events/313189131/) - London, UK
 [DDD North 2026](https://www.dddnorth.co.uk/sessions) - Hull, UK
 
 March
