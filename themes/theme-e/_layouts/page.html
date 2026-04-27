@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<div class='c-content-header'>
+  <span class='c-content-header__title'>{{ page.title }}</span>
+  <span class='c-content-header__hint'>Page</span>
+</div>
+
+<div class='c-post-page'>
+  <article class='c-page-article'>
+    <h1 class='c-page__title'>{{ page.title }}</h1>
+
+    <div class='c-page__content'>
+      {% include page-image.html %}
+      {{ content }}
+    </div>
+  </article>
+</div>

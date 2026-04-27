@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 {% include base_path %}
 
 {% if page.image %}
@@ -9,29 +8,25 @@ layout: default
 {% endif %}
 
 <div class='o-wrapper'>
+  <article class='c-post' itemscope itemtype='http://schema.org/BlogPosting'>
+    <header class='c-post__header'>
+      <h1 class='c-post__title' itemprop='name headline'>{{ page.title }}</h1>
+      <time class='c-post__date' datetime='{{ page.date | date_to_xmlschema }}' itemprop='datePublished'>
+        {{ page.date | date: '%d %B %Y' | upcase }}
+      </time>
+    </header>
 
-  <div class='o-grid'>
-    <div class='o-grid__col'>
-      <article class='c-post' itemscope itemtype='http://schema.org/BlogPosting'>
-
-        <h1 class='c-post__title u-text-center'>{{ page.title }}</h1>
-
-        <time class='c-post__date' datetime='{{ page.date | date_to_xmlschema }}' itemprop='datePublished'>{{ page.date | date: '%d %b %Y' }}</time>
-
-        <div class='c-content' itemprop='articleBody'>
-          {% include page-image.html %}
-
-          {{ content }}
-        </div>
-
-        <div class='c-tags'>
-          {% for tag in page.tags %}
-            <a href='{{ site.baseurl }}/tag/{{ tag }}'>{{ tag }}</a>
-          {% endfor %}
-        </div>
-
-      </article>
-
+    <div class='c-post__body c-content' itemprop='articleBody'>
+      {% include page-image.html %}
+      {{ content }}
     </div>
-  </div>
+
+    {% if page.tags and page.tags.size > 0 %}
+      <div class='c-tags'>
+        {% for tag in page.tags %}
+          <a class='c-tag' href='{{ site.baseurl }}/tag/{{ tag }}'>#{{ tag }}</a>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </article>
 </div>

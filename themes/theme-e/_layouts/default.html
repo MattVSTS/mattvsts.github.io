@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+{% include head.html %}
+
+<body>
+  {% if jekyll.environment == 'production' %}
+  {% include analytics.html %}
+  {% endif %}
+
+  <div class='c-layout'>
+    {% include header.html %}
+
+    <main class='c-main' id='main-content'>
+      {{ content }}
+      {% include footer.html %}
+    </main>
+  </div>
+
+  <script src="{{ '/js/jquery-3.1.1.min.js' | prepend: site.baseurl }}"></script>
+  <script src="{{ '/js/jquery.fitvids.js' | prepend: site.baseurl }}"></script>
+  <script src="{{ '/js/app.js' | prepend: site.baseurl }}"></script>
+  <script>
+    // Close sidebar when overlay is clicked
+    (function() {
+      var overlay = document.getElementById('sidebarOverlay');
+      if (overlay) {
+        overlay.addEventListener('click', function() {
+          document.getElementById('sidebar').classList.remove('is-active');
+          overlay.classList.remove('is-visible');
+        });
+      }
+      // Extend app.js toggle to also manage overlay visibility
+      document.addEventListener('DOMContentLoaded', function() {
+        var toggleBtns = document.querySelectorAll('.js-off-canvas-toggle');
+        toggleBtns.forEach(function(btn) {
+          btn.addEventListener('click', function() {
+            var sidebar = document.getElementById('sidebar');
+            if (overlay) {
+              overlay.classList.toggle('is-visible', sidebar.classList.contains('is-active'));
+            }
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+
+</html>

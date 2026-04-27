@@ -1,21 +1,7 @@
-{% for page in site.pages %}
-  {% unless page.name == '404.md' %}
-    {% if page.title %}
-      <li class='c-nav__item' role='presentation'>
-        <a class='c-nav__link' href='{{ page.url | prepend: site.baseurl }}'>{{ page.title }}</a>
-      </li>
+{% for pg in site.pages %}
+  {% unless pg.name == '404.md' %}
+    {% if pg.title %}
+      <a class='c-nav__link' href='{{ pg.url | prepend: site.baseurl }}'{% if pg.url == page.url %} aria-current='page'{% endif %}>{{ pg.title }}</a>
     {% endif %}
   {% endunless %}
 {% endfor %}
-<li class='c-nav__item' role='presentation'>
-  <a class='c-nav__link' href='https://mvp.microsoft.com/en-us/PublicProfile/4027206'>Microsoft MVP</a>
-</li>
-<li class='c-nav__item' role='presentation'>
-  <a class='c-nav__link' href='https://www.linkedin.com/in/matteoemili/'>LinkedIn</a>
-</li>
-<li class='c-nav__item' role='presentation'>
-  <a class='c-nav__link' href='https://sessionize.com/matteoemili'>Sessionize</a>
-</li>
-<li class='c-nav__item' role='presentation'>
-  <a class='c-nav__link' href='https://www.youtube.com/@mattvsts'>YouTube</a>
-</li>

@@ -3,20 +3,16 @@ layout: default
 ---
 
 <div class='o-wrapper'>
+  <header class='c-tag-header'>
+    <p class='c-tag-header__label'>TAGGED</p>
+    <h1 class='c-tag-header__title'>#{{ page.tag }}</h1>
+  </header>
 
-  <div class='o-grid'>
-    <div class='o-grid__col'>
-      <h4>{{ page.tag }}</h4>
-    </div>
-  </div>
-
-  <div class='o-grid'>
+  <div class='c-post-list'>
     {% for post in page.posts %}
       {% include post-card.liquid %}
     {% endfor %}
   </div>
 
-  <div class='o-grid'>
-    {% include pagination.html %}
-  </div>
+  {% include pagination.html %}
 </div>

@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<div class='c-content-header'>
+  <span class='c-content-header__title'>Posts</span>
+  <span class='c-content-header__hint'>{{ paginator.total_posts }} articles</span>
+</div>
+
+<div class='c-content-body'>
+  <div class='c-post-grid'>
+    {% for post in paginator.posts %}
+      {% include post-card.liquid %}
+    {% endfor %}
+  </div>
+
+  {% include pagination.html %}
+</div>

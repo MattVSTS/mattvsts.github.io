@@ -1,0 +1,21 @@
+{% for nav_page in site.pages %}
+  {% unless nav_page.name == '404.md' %}
+    {% if nav_page.title %}
+      <li class='c-sidebar__nav-item'>
+        <a class='c-sidebar__nav-link' href='{{ nav_page.url | prepend: site.baseurl }}'>{{ nav_page.title }}</a>
+      </li>
+    {% endif %}
+  {% endunless %}
+{% endfor %}
+<li class='c-sidebar__nav-item'>
+  <a class='c-sidebar__nav-link' href='https://mvp.microsoft.com/en-us/PublicProfile/4027206' target='_blank' rel='noopener'>🏆 Microsoft MVP</a>
+</li>
+<li class='c-sidebar__nav-item'>
+  <a class='c-sidebar__nav-link' href='https://www.linkedin.com/in/matteoemili/' target='_blank' rel='noopener'>💼 LinkedIn</a>
+</li>
+<li class='c-sidebar__nav-item'>
+  <a class='c-sidebar__nav-link' href='https://sessionize.com/matteoemili' target='_blank' rel='noopener'>🎤 Sessionize</a>
+</li>
+<li class='c-sidebar__nav-item'>
+  <a class='c-sidebar__nav-link' href='https://www.youtube.com/@mattvsts' target='_blank' rel='noopener'>🎬 YouTube</a>
+</li>

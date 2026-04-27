@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<div class='c-content-header'>
+  <span class='c-content-header__title'>Tag: {{ page.tag }}</span>
+  <span class='c-content-header__hint'>{{ page.posts | size }} posts</span>
+</div>
+
+<div class='c-content-body'>
+  <div class='c-tag-header'>
+    <div>
+      <p class='c-tag-header__label'>Tag</p>
+      <p class='c-tag-header__name'>#{{ page.tag }}</p>
+    </div>
+  </div>
+
+  <div class='c-post-grid'>
+    {% for post in page.posts %}
+      {% include post-card.liquid %}
+    {% endfor %}
+  </div>
+
+  {% include pagination.html %}
+</div>

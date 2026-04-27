@@ -1,7 +1,6 @@
 ---
-layout: page
+layout: page_notitle
 title: About
-image: '/images/pages/about.jpeg'
 ---
 Welcome, this is my technical blog. I work in the technology industry, and my focus has always been on Application Lifecycle Management, DevOps and modern Software Engineering practices. 
 

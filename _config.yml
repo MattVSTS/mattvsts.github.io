@@ -21,8 +21,9 @@ paginate:  60
 sass:
   style: compressed
 
-gems:
+plugins:
   - jekyll-paginate
+  - jekyll-feed
   - jekyll/tagging
 
 include:
@@ -46,8 +47,3 @@ defaults:
     values:
       permalink: /:basename:output_ext
 
-plugins:
-  - jekyll-feed
-title: Dapper DevOps
-description: Matteo's blog
-author: Matteo Emili
