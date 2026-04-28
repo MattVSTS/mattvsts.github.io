@@ -25,3 +25,7 @@ June
 ---
 [DevOpsCon Berlin 2026](https://devopscon.io/berlin/) - Berlin, Germany  
 [VibeKode Munich 2026](https://vibekode.it) - Munich, Germany  
+
+November
+---
+TBC
