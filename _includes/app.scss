@@ -68,9 +68,9 @@ body {
 
   .c-header__top {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
-    padding: 1.5rem 0 0.5rem;
+    padding: 1.5rem 0 0.75rem;
   }
 
   .c-logo__link {
@@ -97,7 +97,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 0;
-  padding: 0.5rem 0 1rem;
+  padding: 0.25rem 0 1rem;
 
   .c-nav__link {
     font-family: $font-stack;
@@ -139,7 +139,7 @@ body {
   cursor: pointer;
   background: none;
   border: $border-thick;
-  padding: 0.35rem 0.5rem;
+  padding: 0.6rem 0.75rem;
   line-height: 1;
   flex-shrink: 0;
 
@@ -226,6 +226,11 @@ body {
   .c-off-canvas-toggle {
     display: flex;
     align-items: center;
+    padding: 0.75rem 1rem;
+  }
+
+  .c-logo__link {
+    padding-bottom: 0.5rem;
   }
 
   .js-off-canvas-container.is-active {
