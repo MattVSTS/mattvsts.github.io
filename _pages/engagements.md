@@ -26,6 +26,10 @@ June
 [DevOpsCon Berlin 2026](https://devopscon.io/berlin/) - Berlin, Germany  
 [VibeKode Munich 2026](https://vibekode.it) - Munich, Germany  
 
+October
+---
+[JAX London 2026](https://jaxlondon.com/ai-development-agentic-systems/vibekode-vibe-to-agentic-guide/)  
+
 November
 ---
 TBC
