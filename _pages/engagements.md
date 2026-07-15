@@ -28,8 +28,12 @@ June
 
 October
 ---
-[JAX London 2026](https://jaxlondon.com/ai-development-agentic-systems/vibekode-vibe-to-agentic-guide/)  
+[JAX London 2026](https://jaxlondon.com/ai-development-agentic-systems/vibekode-vibe-to-agentic-guide/) - London, UK
 
 November
 ---
-TBC
+TBC  
+
+December
+---
+[DevOpsCon Munich 2026](https://devopscon.io/munich/) - Munich, Germany
