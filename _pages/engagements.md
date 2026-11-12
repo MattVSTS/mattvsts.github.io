@@ -32,7 +32,7 @@ October
 
 November
 ---
-TBC  
+[Builders Foundry #6](https://www.meetup.com/the-builders-foundry/events/317147946/?eventOrigin=group_events_list)  
 
 December
 ---
